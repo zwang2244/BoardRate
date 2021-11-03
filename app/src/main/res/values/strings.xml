@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MyQuizApp</string>
+    <string name="question_message_text">Is Chicago the capital of Illinois?</string>
+    <string name="true_button_text">TRUE</string>
+    <string name="false_button_text">FALSE</string>
+</resources>
