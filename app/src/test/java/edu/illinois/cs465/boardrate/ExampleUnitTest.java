@@ -1,4 +1,4 @@
-package edu.illinois.cs465.myquizapp;
+package edu.illinois.cs465.boardrate;
 
 import org.junit.Test;
 

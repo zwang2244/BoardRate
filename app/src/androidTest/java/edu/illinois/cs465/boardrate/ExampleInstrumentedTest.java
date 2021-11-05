@@ -1,4 +1,4 @@
-package edu.illinois.cs465.myquizapp;
+package edu.illinois.cs465.boardrate;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("edu.illinois.cs465.myquizapp", appContext.getPackageName());
+        assertEquals("edu.illinois.cs465.boardrate", appContext.getPackageName());
     }
 }
