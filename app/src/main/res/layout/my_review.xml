@@ -51,7 +51,7 @@ android:orientation="vertical" >
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Game name" />
+                    android:text="@string/board_game3_title" />
 
                 <RatingBar
                     android:id="@+id/rating1"
@@ -134,7 +134,7 @@ android:orientation="vertical" >
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Game name" />
+                    android:text="@string/board_game3_title" />
 
                 <RatingBar
                     android:id="@+id/rating3"
