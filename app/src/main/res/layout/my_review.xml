@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="My Reviews"
+            android:textSize="30dp" />
+
+        <SearchView
+            android:id="@+id/simpleSearchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/board_game3_description"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/board_game2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Game name" />
+
+                <RatingBar
+                    android:id="@+id/rating1"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="4.5"
+                    android:stepSize="0.1" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/board_game3_description"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/left_quote" />/>
+
+                <RatingBar
+                    android:id="@+id/rating2"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:stepSize="0.1" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Game review: Connected is the original Tetris Effect with all-new co-op and competitive online and local multiplayer modes. This is Tetris like you've never seen it, or heard it, or felt it beforean incredibly addictive, unique and breathtakingly gorgeous reinvention of one of the most popular puzzle games of all time."
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/board_game3_description"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/board_game1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Game name" />
+
+                <RatingBar
+                    android:id="@+id/rating3"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="4.5"
+                    android:stepSize="0.1" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/board_game3_description"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/left_quote" />/>
+
+                <RatingBar
+                    android:id="@+id/rating4"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:stepSize="0.1" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Game review: Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre. Hades is a god-like rogue-like dungeon crawler that combines the best aspects of Supergiant's critically acclaimed titles,"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+        \
+
+
+    </LinearLayout>
+
+</FrameLayout>
