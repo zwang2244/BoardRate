@@ -56,8 +56,7 @@
                 />
 
         </com.google.android.material.tabs.TabLayout>
-
-
+        
         <!--Game block-->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card"
