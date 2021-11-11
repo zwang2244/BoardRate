@@ -23,8 +23,6 @@
             app:tabGravity="fill"
             android:id="@+id/top_bar">
 
-<!--            app:tabMaxWidth="0dp"-->
-
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -56,7 +54,22 @@
                 />
 
         </com.google.android.material.tabs.TabLayout>
-        
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            />
+
         <!--Game block-->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card"
@@ -93,16 +106,17 @@
                     android:gravity="center">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center">
 
                         <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:text="@string/board_game3_title"
                         android:textSize="20dp"
+                        android:gravity="center"
                         android:layout_margin="5dp"
                         android:textAppearance="?attr/textAppearanceHeadline6"
                         />
@@ -110,11 +124,11 @@
                         <ImageButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@null"
                             android:contentDescription="SAVE BUTTON"
                             android:src="@drawable/ic_save"
-                            android:adjustViewBounds="true"
-                            app:tint="#F44336"
-                            android:background="@null"/>
+                            app:tint="#F44336" />
                     </LinearLayout>
 
                     <RatingBar
@@ -141,8 +155,8 @@
                         android:text="Party"
                         android:textAppearance="?attr/textAppearanceBody2"
                         android:textColor="?android:attr/textColorSecondary"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
                         android:layout_marginTop="1dp"
                         android:layout_marginBottom="1dp"
                         />
@@ -150,8 +164,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
                             android:layout_marginTop="1dp"
                             android:layout_marginBottom="1dp"
                             android:text="4 Players"
@@ -164,8 +178,8 @@
                         android:text="Card"
                         android:textAppearance="?attr/textAppearanceBody2"
                         android:textColor="?android:attr/textColorSecondary"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
                         android:layout_marginTop="1dp"
                         android:layout_marginBottom="1dp"
                         />
@@ -201,19 +215,27 @@
 
                 </LinearLayout>
 
-
-
-
                 </LinearLayout>
-
-
-
-
 
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card2"
@@ -255,10 +277,11 @@
                             android:orientation="horizontal"
                             android:gravity="center">
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="120dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/board_game3_title"
                                 android:textSize="20dp"
+                                android:gravity="center"
                                 android:layout_margin="5dp"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
                                 />
@@ -297,8 +320,8 @@
                                 android:text="Party"
                                 android:textAppearance="?attr/textAppearanceBody2"
                                 android:textColor="?android:attr/textColorSecondary"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
                                 android:layout_marginTop="1dp"
                                 android:layout_marginBottom="1dp"
                                 />
@@ -306,8 +329,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
                                 android:layout_marginTop="1dp"
                                 android:layout_marginBottom="1dp"
                                 android:text="4 Players"
@@ -320,8 +343,8 @@
                                 android:text="Card"
                                 android:textAppearance="?attr/textAppearanceBody2"
                                 android:textColor="?android:attr/textColorSecondary"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
                                 android:layout_marginTop="1dp"
                                 android:layout_marginBottom="1dp"
                                 />
@@ -369,7 +392,22 @@
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            />
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card3"
             android:layout_width="match_parent"
@@ -410,11 +448,12 @@
                             android:orientation="horizontal"
                             android:gravity="center">
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="120dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/board_game3_title"
                                 android:textSize="20dp"
                                 android:layout_margin="5dp"
+                                android:gravity="center"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
                                 />
 
@@ -446,47 +485,6 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="center">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Party"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginBottom="1dp"
-                                />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginBottom="1dp"
-                                android:text="4 Players"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Card"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginBottom="1dp"
-                                />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center">
                             <ImageButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -512,19 +510,12 @@
 
                     </LinearLayout>
 
-
-
-
                 </LinearLayout>
-
-
-
-
 
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
-
+        </LinearLayout>
 
 
     </LinearLayout>
