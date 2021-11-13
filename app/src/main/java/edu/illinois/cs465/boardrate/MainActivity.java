@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
+    MyApplication myApplication = (MyApplication) this.getApplication();
+    private List<Game> allGames = new ArrayList<Game>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +46,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
         readGamePageData(); // Read data from raw/mock_db_games_game_page.csv
+        myApplication.setAllGames(allGames);
+        //List<Game> Games = myApplication.getAllGames(); // the games can be get in all activities
     }
 
-    private List<Game> allGames= new ArrayList<Game>();
     private void readGamePageData(){
         InputStream is = getResources().openRawResource(R.raw.mock_db_games_game_page);
         BufferedReader reader = new BufferedReader(
@@ -81,5 +85,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 
 }
