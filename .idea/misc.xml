@@ -21,9 +21,11 @@
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.15900900900900902" />
         <entry key="app/src/main/res/drawable/ic_trending.xml" value="1.103125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.14504504504504503" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.264945652173913" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.25271739130434784" />
+        <entry key="app/src/main/res/layout/game_card.xml" value="0.335" />
         <entry key="app/src/main/res/layout/my_review.xml" value="0.5122800100944119" />
         <entry key="app/src/main/res/layout/my_saved_game.xml" value="0.3958749168330007" />
       </map>
