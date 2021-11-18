@@ -32,7 +32,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.14504504504504503" />
         <entry key="app/src/main/res/layout/fragment_card.xml" value="0.21829710144927536" />
-        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.264945652173913" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_family.xml" value="0.21829710144927536" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.25271739130434784" />
