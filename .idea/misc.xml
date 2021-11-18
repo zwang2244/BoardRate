@@ -24,6 +24,7 @@
         <entry key="app/src/main/res/drawable/ic_trending.xml" value="1.103125" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22972972972972974" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.11936936936936937" />
         <entry key="app/src/main/res/layout/fragment_card_view.xml" value="0.22972972972972974" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.264945652173913" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.375" />
