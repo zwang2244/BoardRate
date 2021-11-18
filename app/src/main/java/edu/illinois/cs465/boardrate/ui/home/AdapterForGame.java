@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import edu.illinois.cs465.boardrate.Game;
@@ -24,6 +26,15 @@ public class AdapterForGame extends RecyclerView.Adapter<AdapterForGame.MyViewHo
     Context context;
 
     public AdapterForGame(List<Game> allGames, Context context) {
+
+        //sort the game by ranking by adding a custom comparator
+        Collections.sort(allGames, new Comparator<Game>(){
+            public int compare(Game o1, Game o2){
+                if(o1.getRanking1() == o2.getRanking1())
+                    return 0;
+                return o1.getRanking1() < o2.getRanking1() ? -1 : 1;
+            }
+        });
         this.allGames = allGames;
         this.context = context;
     }
