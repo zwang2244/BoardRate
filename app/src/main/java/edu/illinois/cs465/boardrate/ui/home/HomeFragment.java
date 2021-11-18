@@ -72,12 +72,15 @@ public class HomeFragment extends Fragment {
 //        for (int i = 0; i<allGames.size();i++){
 //            Log.d("home fragment", "all games loaded?: " + allGames.get(i));
 //        }
+//
 //        recyclerView = binding.rvGameList;
 //        recyclerView.setHasFixedSize(true);
 //        layoutManager = new LinearLayoutManager(getActivity());
 //        recyclerView.setLayoutManager(layoutManager);
 //        mAdapter = new AdapterForGame(allGames, getActivity());
 //        recyclerView.setAdapter(mAdapter);
+
+
         return root;
     }
 
