@@ -15,5 +15,13 @@
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/title_notifications" />
+    <item
+        android:id="@+id/navigation_my_reviews"
+        android:icon="@drawable/review"
+        android:title="My reviews" />
+    <item
+        android:id="@+id/navigation_my_saved_games"
+        android:icon="@drawable/game"
+        android:title="My Saved Games" />
 
 </menu>
