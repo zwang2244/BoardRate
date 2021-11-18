@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -21,11 +22,11 @@ import java.util.List;
 import edu.illinois.cs465.boardrate.Game;
 import edu.illinois.cs465.boardrate.R;
 
-public class AdapterForGame extends RecyclerView.Adapter<AdapterForGame.MyViewHolder> {
+public class AdapterForCardGame extends RecyclerView.Adapter<AdapterForCardGame.MyViewHolder> {
     List<Game> allGames;
     Context context;
 
-    public AdapterForGame(List<Game> allGames, Context context) {
+    public AdapterForCardGame(List<Game> allGames, Context context) {
 
         //sort the game by ranking by adding a custom comparator
         Collections.sort(allGames, new Comparator<Game>(){
@@ -35,7 +36,14 @@ public class AdapterForGame extends RecyclerView.Adapter<AdapterForGame.MyViewHo
                 return o1.getRanking1() < o2.getRanking1() ? -1 : 1;
             }
         });
-        this.allGames = allGames;
+        // filter out the card games
+        ArrayList<Game> cardgames = new ArrayList<>();
+        for(int i = 0; i < allGames.size(); i++){
+            if(allGames.get(i).getTag1().equals("Card") || allGames.get(i).getTag2().equals("Card") || allGames.get(i).getTag3().equals("Card")){
+                cardgames.add(allGames.get(i));
+            }
+        }
+        this.allGames = cardgames;
         this.context = context;
     }
 
@@ -50,14 +58,14 @@ public class AdapterForGame extends RecyclerView.Adapter<AdapterForGame.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 //        holder.game_pic.
-        Glide.with(context).load(allGames.get(position).getImageURL()).into(holder.game_pic);
-        holder.game_title.setText(allGames.get(position).getName());
-        holder.game_rank.setText(String.valueOf(allGames.get(position).getRanking1()));
-        holder.game_rating.setRating(Float.parseFloat(allGames.get(position).getRating()));
-        holder.game_tag1.setText(allGames.get(position).getTag1());
-        holder.game_tag2.setText(allGames.get(position).getTag2());
-        holder.game_tag3.setText(allGames.get(position).getTag3());
-        holder.game_duration.setText(allGames.get(position).getTimetoPlay());
+        Glide.with(context).load(this.allGames.get(position).getImageURL()).into(holder.game_pic);
+        holder.game_title.setText(this.allGames.get(position).getName());
+        holder.game_rank.setText(String.valueOf(position + 1));
+        holder.game_rating.setRating(Float.parseFloat(this.allGames.get(position).getRating()));
+        holder.game_tag1.setText(this.allGames.get(position).getTag1());
+        holder.game_tag2.setText(this.allGames.get(position).getTag2());
+        holder.game_tag3.setText(this.allGames.get(position).getTag3());
+        holder.game_duration.setText(this.allGames.get(position).getTimetoPlay());
     }
 
     @Override
