@@ -10,10 +10,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +31,9 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -39,8 +46,17 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-//        homeViewModel.getText();
+        tabLayout = binding.topBar;
+        viewPager = binding.viewpageHome;
+        tabLayout.setupWithViewPager(viewPager);
+        AdapterForCategory adapterForCategory = new AdapterForCategory(getActivity().getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        adapterForCategory.addFragement(new CardFragment(), "Card");
+        adapterForCategory.addFragement(new StrategyFragment(), "Strategy");
+        adapterForCategory.addFragement(new WarFragment(), "War");
+        adapterForCategory.addFragement(new FamilyFragment(), "Family");
+        adapterForCategory.addFragement(new PartyFragment(), "Party");
+        viewPager.setAdapter(adapterForCategory);
+        //        homeViewModel.getText();
 //        final TextView textView = binding.textHome;
 //        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
 //            @Override
@@ -56,12 +72,12 @@ public class HomeFragment extends Fragment {
 //        for (int i = 0; i<allGames.size();i++){
 //            Log.d("home fragment", "all games loaded?: " + allGames.get(i));
 //        }
-        recyclerView = binding.rvGameList;
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new AdapterForGame(allGames, getActivity());
-        recyclerView.setAdapter(mAdapter);
+//        recyclerView = binding.rvGameList;
+//        recyclerView.setHasFixedSize(true);
+//        layoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(layoutManager);
+//        mAdapter = new AdapterForGame(allGames, getActivity());
+//        recyclerView.setAdapter(mAdapter);
         return root;
     }
 
