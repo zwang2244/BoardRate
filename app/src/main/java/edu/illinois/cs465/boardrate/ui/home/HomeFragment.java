@@ -51,11 +51,11 @@ public class HomeFragment extends Fragment {
 
 
 
-        MyApplication myApplication = (MyApplication) getActivity().getApplication();
-        allGames = myApplication.getAllGames();
-        for (int i = 0; i<allGames.size();i++){
-            Log.d("home fragment", "all games loaded?: " + allGames.get(i));
-        }
+//        MyApplication myApplication = (MyApplication) getActivity().getApplication();
+//        allGames = myApplication.getAllGames();
+//        for (int i = 0; i<allGames.size();i++){
+//            Log.d("home fragment", "all games loaded?: " + allGames.get(i));
+//        }
         recyclerView = binding.rvGameList;
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
