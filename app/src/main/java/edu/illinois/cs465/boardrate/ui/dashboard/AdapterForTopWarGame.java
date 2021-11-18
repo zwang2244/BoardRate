@@ -21,11 +21,11 @@ import java.util.List;
 import edu.illinois.cs465.boardrate.Game;
 import edu.illinois.cs465.boardrate.R;
 
-public class AdapterForPartyGame extends RecyclerView.Adapter<AdapterForPartyGame.MyViewHolder> {
+public class AdapterForTopWarGame extends RecyclerView.Adapter<AdapterForTopWarGame.MyViewHolder> {
     List<Game> allGames;
     Context context;
 
-    public AdapterForPartyGame(List<Game> allGames, Context context) {
+    public AdapterForTopWarGame(List<Game> allGames, Context context) {
 
         //sort the game by ranking by adding a custom comparator
         Collections.sort(allGames, new Comparator<Game>(){
@@ -35,14 +35,14 @@ public class AdapterForPartyGame extends RecyclerView.Adapter<AdapterForPartyGam
                 return o1.getRankings2() < o2.getRankings2() ? -1 : 1;
             }
         });
-        // filter out the party games
-        ArrayList<Game> partygames = new ArrayList<>();
+        // filter out the card games
+        ArrayList<Game> wargames = new ArrayList<>();
         for(int i = 0; i < allGames.size(); i++){
-            if(allGames.get(i).getTag1().equals("Party") || allGames.get(i).getTag2().equals("Party") || allGames.get(i).getTag3().equals("Party")){
-                partygames.add(allGames.get(i));
+            if(allGames.get(i).getTag1().equals("War") || allGames.get(i).getTag2().equals("War") || allGames.get(i).getTag3().equals("War")){
+                wargames.add(allGames.get(i));
             }
         }
-        this.allGames = partygames;
+        this.allGames = wargames;
         this.context = context;
     }
 
@@ -56,6 +56,7 @@ public class AdapterForPartyGame extends RecyclerView.Adapter<AdapterForPartyGam
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+//        holder.game_pic.
         Glide.with(context).load(this.allGames.get(position).getImageURL()).into(holder.game_pic);
         holder.game_title.setText(this.allGames.get(position).getName());
         holder.game_rank.setText(String.valueOf(position + 1));
