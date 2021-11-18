@@ -3,41 +3,51 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <device id="pixel_4a" />
         <device id="pixel_3a" />
       </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f9b519a-b0d6-46f4-b6d3-2f8de61bec08" name="Default Changelist" comment="gitignore added back">
+    <list default="true" id="2f9b519a-b0d6-46f4-b6d3-2f8de61bec08" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/AdapterForCardGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/AdapterForCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/AdapterForFamilyGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/AdapterForPartyGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/AdapterForStrategyGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/AdapterForWarGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/CardFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/FamilyFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/PartyFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/StrategyFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/WarFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/DashboardFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard/DashboardFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
-    <list id="bce69951-4067-4007-97f1-e676776ab9af" name="gitignore added back" comment="" />
-    <list id="69d85025-704f-4bfd-a804-cbc12ed9e88f" name="Login fragment created, search fragment added, both icons added to bottom nav bar, search works but login throwing error" comment="" />
-    <list id="388a5230-600e-40a0-974b-3ee8f27bb1bf" name="New changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/mkumar/.android/avd/Pixel_2_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/wzl9420sina.com/.android/avd/Pixel_3a_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -74,11 +84,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -89,7 +94,13 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="20VxwWaXBBzspg4do0V0RbmpiOv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -98,21 +109,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard" />
     <property name="memory.settings.postsync.last.time.stamp" value="1636143865132" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="edu.illinois.cs465.boardrate.ui.home" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/edu/illinois/cs465/boardrate/ui/dashboard" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
-    <key name="android.template.1914702958">
-      <recent name="edu.illinois.cs465.boardrate" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="edu.illinois.cs465.boardrate" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.illinois.cs465.boardrate.ui.home" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -246,14 +258,6 @@
       <option name="presentableId" value="Default" />
       <updated>1636143797090</updated>
     </task>
-    <task id="LOCAL-00001" summary="Login fragment created, search fragment added, both icons added to bottom nav bar, search works but login throwing error">
-      <created>1636694424466</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1636694424466</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,10 +271,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Login fragment created, user icon added to bottom nav bar, search fragment started" />
-    <MESSAGE value="Login fragment created, search fragment added, both icons added to bottom nav bar, search works but login throwing error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login fragment created, search fragment added, both icons added to bottom nav bar, search works but login throwing error" />
   </component>
 </project>

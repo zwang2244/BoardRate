@@ -35,4 +35,14 @@
         android:label="My Account"
         tools:layout="@layout/fragment_login" />
 
+    <fragment
+        android:id="@+id/navigation_my_reviews"
+        android:name="edu.illinois.cs465.boardrate.ui.notifications.MyReviewFragment"
+        android:label="My review"
+        tools:layout="@layout/fragment_my_review" />
+    <fragment
+        android:id="@+id/navigation_my_saved_games"
+        android:name="edu.illinois.cs465.boardrate.ui.notifications.MySavedGamesFragment"
+        android:label="My saved games"
+        tools:layout="@layout/fragment_my_saved_games" />
 </navigation>
