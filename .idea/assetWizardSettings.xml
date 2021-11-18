@@ -24,7 +24,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="/private/var/folders/5l/mn24_nyn2g16c7_6dtb3pjpc0000gn/T/baseline_trending_up_24.xml" />
+                                                <entry key="imagePath" value="/private/var/folders/5l/mn24_nyn2g16c7_6dtb3pjpc0000gn/T/baseline_local_fire_department_24.xml" />
                                                 <entry key="opacityPercent" value="60" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
@@ -37,7 +37,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/trending_up/baseline_trending_up_24.xml" />
+                                                <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/local_fire_department/baseline_local_fire_department_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -69,7 +69,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_trending" />
+                                      <entry key="outputName" value="ic_popular" />
                                     </map>
                                   </option>
                                 </PersistentState>

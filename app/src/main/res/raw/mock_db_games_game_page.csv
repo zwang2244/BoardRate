@@ -1,21 +1,21 @@
-gameID,Name,Rating,Number of Reviewrs,ImageURL,Time to Play (min),Ranking1,Rankings2,Number of Players,Tag1,Tag2,Tag3,Tag1Ranking,Tag2Ranking,Tag3Ranking
-1,Monopoly,4.8,1516,https://m.media-amazon.com/images/I/81qy+MXuxDL._AC_SL1392_.jpg,20-180,4,4,8-Feb,Board,Strategy,Family,3,3,2
-2,The Game of Life,4.8,570,https://m.media-amazon.com/images/I/91FnnNUmEgL._AC_SL1500_.jpg,60,15,9,6-Feb,Board,Adventure,Family,8,1,8
-3,Clue,4.3,1089,https://media.kohlsimg.com/is/image/kohls/1725745?wid=1200&hei=1200&op_sharpen=1,Oct-60,8,8,6-Feb,Board,Mystery,Deduction,6,1,1
-4,Candy Land,4.4,1685,https://m.media-amazon.com/images/I/91yUG40gv0L._AC_SL1500_.jpg,15-21,3,3,4-Feb,Board,Children,Family,2,1,1
-5,Battleship,4.9,1953,https://m.media-amazon.com/images/I/81u7L0geagL._AC_SL1500_.jpg,15-30,1,1,2,Grid,Strategy,War,1,1,1
-6,Risk,4.3,1867,https://target.scene7.com/is/image/Target/GUEST_77c4f6d6-0890-4875-9dbf-e96fb4e9a91e?wid=488&hei=488&fmt=pjpeg,60+,2,2,6-Feb,Board,Strategy,War,1,2,2
-7,Chutes and Ladders,3.5,1235,https://m.media-amazon.com/images/I/91bHa8umU7L._AC_SL1500_.jpg,15-30,7,7,3-Feb,Board,Children,Family,5,2,4
-8,Sorry!,4.6,558,https://images.heb.com/is/image/HEBGrocery/001669716,45,16,10,4-Feb,Board,Children,Family,9,3,9
-9,Catan,4.3,1273,https://m.media-amazon.com/images/I/81+okm4IpfL._AC_SX425_.jpg,60-120,6,6,4-Mar,Board,Strategy,Family,4,4,3
-10,Taboo,4.4,1321,https://m.media-amazon.com/images/I/51+sKSXHcaL._AC_SX522_.jpg,20-May,5,5,2+,Party,Word,Card,1,1,1
-11,Codenames,4.4,229,https://cf.geekdo-images.com/F_KDEu0GjdClml8N7c8Imw__opengraph/img/HwjL0dy9bRuwn1XPzKwvUcRe26U=/fit-in/1200x630/filters:strip_icc()/pic2582929.jpg,15-30,17,7,8-Apr,Party,Word,Deduction,4,2,3
-12,Root,4.1,82,https://m.media-amazon.com/images/I/91ezFG-gQ6L._AC_SX425_.jpg,60-90,19,9,4-Feb,Dice,Adventure,War,2,2,3
-13,Azul,3.9,967,https://target.scene7.com/is/image/Target/GUEST_84e4f7e9-346b-46d0-8524-23e8a83fd732?wid=488&hei=488&fmt=pjpeg,30-45,9,1,4-Feb,Puzzle,Strategy,Family,1,5,5
-14,Cubitos,3.9,872,https://cf.geekdo-images.com/_WY_JrQQRrSUlVof11hMpQ__imagepage/img/xNP2i0U2osOOiw5MQ1TJJt4Q4CE=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5226311.png,30-60,13,5,4-Feb,Dice,Strategy,Family,1,8,7
-15,What Next?,4.1,50,https://cf.geekdo-images.com/blFaCkxLvyJjIUAe56YfnA__imagepage/img/YJJIu9LXSVqXs9cBKsHlwZI65EE=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6278691.png,30-60,20,10,4-Jan,Party,Adventure,Card,6,3,4
-16,Small World,4,928,https://i5.walmartimages.com/asr/c449c6ec-cae1-4b3c-8010-f74390d56abd_1.9d0a7645e3cd8d776b8a1396f03b524b.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF,60-80,12,4,5-Feb,Fantasy,Strategy,Family,1,7,6
-17,Mysterium,4.2,177,https://i5.walmartimages.com/asr/05b826ee-415a-47a7-930f-b820952c0c89_1.cb066ed3a21ff44f4f86c4b53e1a259b.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF,60,18,8,7-Feb,Party,Mystery,Deduction,5,3,4
-18,Sherlock Holmes Consulting Detective: The Thames Murders and Other Cases,3.9,680,https://m.media-amazon.com/images/I/71kno4TmgUL._AC_SL1000_.jpg,90,14,6,8-Jan,Party,Mystery,Deduction,3,2,2
-19,Exploding Kitten,4.9,936,https://cdn.shopify.com/s/files/1/0345/9180/1483/products/EK_OE-Hero_71aa639c-1ca0-4085-a85c-1fdbe182bb66_1000x@2x.png?v=1616615758,15,11,3,5-Feb,Party,Humor,Card,2,1,3
-20,Pandemic,3.8,946,https://m.media-amazon.com/images/I/814F5EyoMoL._AC_SX425_.jpg,45,10,2,4-Feb,Board,Strategy,Card,7,6,2
+gameID,Name,Rating,Number of Reviewers,ImageURL,Time to Play (min),Ranking1,Rankings2,Number of Players,Tag1,Tag2,Tag3,Tag1Ranking,Tag2Ranking,Tag3Ranking
+1,Monopoly,4.8,1516,https://m.media-amazon.com/images/I/81qy+MXuxDL._AC_SL1392_.jpg,20-180min,4,4,8-Feb,Board,Strategy,Family,3,3,2
+2,The Game of Life,4.8,570,https://m.media-amazon.com/images/I/91FnnNUmEgL._AC_SL1500_.jpg,60min,15,9,6-Feb,Board,Adventure,Family,8,1,8
+3,Clue,4.3,1089,https://media.kohlsimg.com/is/image/kohls/1725745?wid=1200&hei=1200&op_sharpen=1,10-60min,8,8,6-Feb,Board,Mystery,Deduction,6,1,1
+4,Candy Land,4.4,1685,https://m.media-amazon.com/images/I/91yUG40gv0L._AC_SL1500_.jpg,15-21min,3,3,4-Feb,Board,Children,Family,2,1,1
+5,Battleship,4.9,1953,https://m.media-amazon.com/images/I/81u7L0geagL._AC_SL1500_.jpg,15-30min,1,1,2,Grid,Strategy,War,1,1,1
+6,Risk,4.3,1867,https://target.scene7.com/is/image/Target/GUEST_77c4f6d6-0890-4875-9dbf-e96fb4e9a91e?wid=488&hei=488&fmt=pjpeg,60+min,2,2,6-Feb,Board,Strategy,War,1,2,2
+7,Chutes and Ladders,3.5,1235,https://m.media-amazon.com/images/I/91bHa8umU7L._AC_SL1500_.jpg,15-30min,7,7,3-Feb,Board,Children,Family,5,2,4
+8,Sorry!,4.6,558,https://images.heb.com/is/image/HEBGrocery/001669716,45min,16,10,4-Feb,Board,Children,Family,9,3,9
+9,Catan,4.3,1273,https://m.media-amazon.com/images/I/81+okm4IpfL._AC_SX425_.jpg,60-120min,6,6,4-Mar,Board,Strategy,Family,4,4,3
+10,Taboo,4.4,1321,https://m.media-amazon.com/images/I/51+sKSXHcaL._AC_SX522_.jpg,5-20min,5,5,2+,Party,Word,Card,1,1,1
+11,Codenames,4.4,229,https://cf.geekdo-images.com/F_KDEu0GjdClml8N7c8Imw__opengraph/img/HwjL0dy9bRuwn1XPzKwvUcRe26U=/fit-in/1200x630/filters:strip_icc()/pic2582929.jpg,15-30min,17,7,8-Apr,Party,Word,Deduction,4,2,3
+12,Root,4.1,82,https://m.media-amazon.com/images/I/91ezFG-gQ6L._AC_SX425_.jpg,60-90min,19,9,4-Feb,Dice,Adventure,War,2,2,3
+13,Azul,3.9,967,https://target.scene7.com/is/image/Target/GUEST_84e4f7e9-346b-46d0-8524-23e8a83fd732?wid=488&hei=488&fmt=pjpeg,30-45min,9,1,4-Feb,Puzzle,Strategy,Family,1,5,5
+14,Cubitos,3.9,872,https://cf.geekdo-images.com/_WY_JrQQRrSUlVof11hMpQ__imagepage/img/xNP2i0U2osOOiw5MQ1TJJt4Q4CE=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5226311.png,30-60min,13,5,4-Feb,Dice,Strategy,Family,1,8,7
+15,What Next?,4.1,50,https://cf.geekdo-images.com/blFaCkxLvyJjIUAe56YfnA__imagepage/img/YJJIu9LXSVqXs9cBKsHlwZI65EE=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6278691.png,30-60min,20,10,4-Jan,Party,Adventure,Card,6,3,4
+16,Small World,4,928,https://i5.walmartimages.com/asr/c449c6ec-cae1-4b3c-8010-f74390d56abd_1.9d0a7645e3cd8d776b8a1396f03b524b.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF,60-80min,12,4,5-Feb,Fantasy,Strategy,Family,1,7,6
+17,Mysterium,4.2,177,https://i5.walmartimages.com/asr/05b826ee-415a-47a7-930f-b820952c0c89_1.cb066ed3a21ff44f4f86c4b53e1a259b.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF,60min,18,8,7-Feb,Party,Mystery,Deduction,5,3,4
+18,Sherlock Holmes Consulting Detective: The Thames Murders and Other Cases,3.9,680,https://m.media-amazon.com/images/I/71kno4TmgUL._AC_SL1000_.jpg,90min,14,6,8-Jan,Party,Mystery,Deduction,3,2,2
+19,Exploding Kitten,4.9,936,https://cdn.shopify.com/s/files/1/0345/9180/1483/products/EK_OE-Hero_71aa639c-1ca0-4085-a85c-1fdbe182bb66_1000x@2x.png?v=1616615758,15min,11,3,5-Feb,Party,Humor,Card,2,1,3
+20,Pandemic,3.8,946,https://m.media-amazon.com/images/I/814F5EyoMoL._AC_SX425_.jpg,45min,10,2,4-Feb,Board,Strategy,Card,7,6,2
