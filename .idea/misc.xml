@@ -31,6 +31,7 @@
         <entry key="app/src/main/res/layout/fragment_family.xml" value="0.21829710144927536" />
         <entry key="app/src/main/res/layout/fragment_family_top_games.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_my_saved_games.xml" value="0.21418020679468242" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.25271739130434784" />
         <entry key="app/src/main/res/layout/fragment_party.xml" value="0.21829710144927536" />
         <entry key="app/src/main/res/layout/fragment_party_top_games.xml" value="0.1" />
@@ -40,7 +41,8 @@
         <entry key="app/src/main/res/layout/fragment_war_top_games.xml" value="0.1" />
         <entry key="app/src/main/res/layout/game_card.xml" value="0.335" />
         <entry key="app/src/main/res/layout/my_review.xml" value="0.5122800100944119" />
-        <entry key="app/src/main/res/layout/my_saved_game.xml" value="0.3958749168330007" />
+        <entry key="app/src/main/res/layout/my_saved_game.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

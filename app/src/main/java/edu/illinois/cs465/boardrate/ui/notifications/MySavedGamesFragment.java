@@ -3,6 +3,7 @@ package edu.illinois.cs465.boardrate.ui.notifications;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -67,17 +68,17 @@ public class MySavedGamesFragment extends Fragment implements View.OnClickListen
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_my_saved_games, container, false);
-        ImageView image = v.findViewById(R.id.image);
-        image.setOnClickListener(this);
+        CardView card = v.findViewById(R.id.card_mockup);
+//        ImageView image = v.findViewById(R.id.image_ek_mockup);
+        card.setOnClickListener(this);
         return v;
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.image:
+            case R.id.card_mockup:
                 startActivity(new Intent(getActivity(), GameDetailsActivity.class));
-
             break;
         }
     }
