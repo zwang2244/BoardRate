@@ -15,11 +15,17 @@
             android:queryHint="Search here"
             android:layout_gravity="center_horizontal"/>
         <!-- TODO: Update blank fragment layout -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_search"
-            android:layout_width="match_parent"
-            android:layout_below="@+id/gameSearchView"
-            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/searchListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/gameSearchView" />
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rv_search"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_below="@+id/gameSearchView"-->
+<!--            android:layout_height="wrap_content" />-->
     </RelativeLayout>
 
 </FrameLayout>

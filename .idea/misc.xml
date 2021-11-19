@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.153125" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3625" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.3625" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.3625" />
@@ -26,16 +27,21 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.11936936936936937" />
         <entry key="app/src/main/res/layout/fragment_card.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/fragment_card_top_games.xml" value="0.11936936936936937" />
         <entry key="app/src/main/res/layout/fragment_card_view.xml" value="0.22972972972972974" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.264945652173913" />
         <entry key="app/src/main/res/layout/fragment_family.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/fragment_family_top_games.xml" value="0.11936936936936937" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.23963963963963963" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.25271739130434784" />
         <entry key="app/src/main/res/layout/fragment_party.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/fragment_party_top_games.xml" value="0.11936936936936937" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.22972972972972974" />
         <entry key="app/src/main/res/layout/fragment_strategy.xml" value="0.11936936936936937" />
+        <entry key="app/src/main/res/layout/fragment_strategy_top_games.xml" value="0.11936936936936937" />
         <entry key="app/src/main/res/layout/fragment_war.xml" value="0.11936936936936937" />
+        <entry key="app/src/main/res/layout/fragment_war_top_games.xml" value="0.11936936936936937" />
         <entry key="app/src/main/res/layout/game_card.xml" value="0.22972972972972974" />
         <entry key="app/src/main/res/layout/game_card_search.xml" value="0.22972972972972974" />
         <entry key="app/src/main/res/layout/my_review.xml" value="0.14504504504504503" />
