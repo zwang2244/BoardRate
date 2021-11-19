@@ -14,14 +14,27 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="edu.illinois.cs465.boardrate.ui.dashboard.DashboardFragment"
-        android:label="Top of All Time"
+        android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="edu.illinois.cs465.boardrate.ui.home.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="edu.illinois.cs465.boardrate.ui.notifications.NotificationsFragment"
-        android:label="Notifications"
+        android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_user"
+        android:name="edu.illinois.cs465.boardrate.ui.login.LoginFragment"
+        android:label="My Account"
+        tools:layout="@layout/fragment_login" />
+
     <fragment
         android:id="@+id/navigation_my_reviews"
         android:name="edu.illinois.cs465.boardrate.ui.notifications.MyReviewFragment"

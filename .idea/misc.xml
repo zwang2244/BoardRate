@@ -15,30 +15,32 @@
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/my_review.xml" value="0.3463541666666667" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/my_saved_game.xml" value="0.3463541666666667" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/drawable-anydpi/ic_popular.xml" value="0.21306306306306305" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2436936936936937" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2436936936936937" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.15900900900900902" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.15900900900900902" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.15900900900900902" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.15900900900900902" />
         <entry key="app/src/main/res/drawable/ic_trending.xml" value="1.103125" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22972972972972974" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_search.xml" value="0.14504504504504503" />
-        <entry key="app/src/main/res/layout/fragment_card.xml" value="0.21829710144927536" />
-        <entry key="app/src/main/res/layout/fragment_card_top_games.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_family.xml" value="0.21829710144927536" />
-        <entry key="app/src/main/res/layout/fragment_family_top_games.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.11936936936936937" />
+        <entry key="app/src/main/res/layout/fragment_card.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/fragment_card_view.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.264945652173913" />
+        <entry key="app/src/main/res/layout/fragment_family.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.23963963963963963" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.25271739130434784" />
-        <entry key="app/src/main/res/layout/fragment_party.xml" value="0.21829710144927536" />
-        <entry key="app/src/main/res/layout/fragment_party_top_games.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_strategy.xml" value="0.21829710144927536" />
-        <entry key="app/src/main/res/layout/fragment_strategy_top_games.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_war.xml" value="0.21829710144927536" />
-        <entry key="app/src/main/res/layout/fragment_war_top_games.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/game_card.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/my_review.xml" value="0.5122800100944119" />
-        <entry key="app/src/main/res/layout/my_saved_game.xml" value="0.3958749168330007" />
+        <entry key="app/src/main/res/layout/fragment_party.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/fragment_strategy.xml" value="0.11936936936936937" />
+        <entry key="app/src/main/res/layout/fragment_war.xml" value="0.11936936936936937" />
+        <entry key="app/src/main/res/layout/game_card.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/game_card_search.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/my_review.xml" value="0.14504504504504503" />
+        <entry key="app/src/main/res/layout/my_saved_game.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.22972972972972974" />
       </map>
     </option>
   </component>
