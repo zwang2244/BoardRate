@@ -23,7 +23,7 @@
     <item
         android:id="@+id/navigation_my_reviews"
         android:icon="@drawable/review"
-        android:title="My reviews" />
+        android:title="My Reviews" />
     <item
         android:id="@+id/navigation_my_saved_games"
         android:icon="@drawable/game"
