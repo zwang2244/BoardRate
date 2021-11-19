@@ -87,6 +87,7 @@
                         android:orientation="horizontal"
                         android:gravity="center">
                         <TextView
+                            android:id="@+id/card_tag1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Party"
@@ -99,6 +100,7 @@
                             />
 
                         <TextView
+                            android:id="@+id/card_tag2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -110,6 +112,7 @@
                             android:textColor="?android:attr/textColorSecondary" />
 
                         <TextView
+                            android:id="@+id/card_tag3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Card"
@@ -138,6 +141,7 @@
                             app:tint="#F44336"
                             android:background="@null"/>
                         <TextView
+                            android:id="@+id/card_timeToPlay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2hrs"

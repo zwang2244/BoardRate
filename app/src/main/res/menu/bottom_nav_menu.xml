@@ -16,10 +16,10 @@
         android:icon="@drawable/ic_baseline_search_24"
         android:title="@string/title_search" />
 
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_notifications"-->
+<!--        android:icon="@drawable/ic_notifications_black_24dp"-->
+<!--        android:title="@string/title_notifications" />-->
     <item
         android:id="@+id/navigation_my_reviews"
         android:icon="@drawable/review"
@@ -29,10 +29,10 @@
         android:icon="@drawable/game"
         android:title="My Saved Games" />
 
-    <item
-        android:id="@+id/navigation_user"
-        android:icon="@drawable/ic_baseline_person_24"
-        android:title="My Account" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_user"-->
+<!--        android:icon="@drawable/ic_baseline_person_24"-->
+<!--        android:title="My Account" />-->
 
 
 </menu>
