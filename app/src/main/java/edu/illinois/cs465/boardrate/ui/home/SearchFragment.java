@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.SearchView;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
 
     private FragmentSearchBinding binding;
     private RecyclerView recyclerView;
+    private ListView list;
     private AdapterForSearch mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<Game> allGames = new ArrayList<Game>();
@@ -35,12 +37,13 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
         View root = binding.getRoot();
         MyApplication myApplication = (MyApplication) getActivity().getApplication();
         allGames = myApplication.getAllGames();
-        recyclerView = binding.rvSearch;
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
+        list = (ListView) root.findViewById(R.id.searchListView);
+//        recyclerView = binding.rvSearch;
+//        recyclerView.setHasFixedSize(true);
+//        layoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(layoutManager);
         mAdapter = new AdapterForSearch(allGames, getActivity());
-        recyclerView.setAdapter(mAdapter);
+        list.setAdapter(mAdapter);
 
         // Locate the EditText in listview_main.xml
         editsearch = (SearchView) root.findViewById(R.id.gameSearchView);

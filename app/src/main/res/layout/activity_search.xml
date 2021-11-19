@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <SearchView
-            android:id="@+id/gameSearchView"
+            android:id="@+id/gameSearchViewa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:iconifiedByDefault="false"
@@ -31,10 +31,10 @@
             android:layout_gravity="center_horizontal"/>
 
         <ListView
-            android:id="@+id/searchListView"
+            android:id="@+id/searchListViewa"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@+id/gameSearchView" />
+            android:layout_below="@+id/gameSearchViewa" />
     </RelativeLayout>
 
 
