@@ -1,5 +1,6 @@
 package edu.illinois.cs465.boardrate.ui.notifications;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,15 +8,18 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import edu.illinois.cs465.boardrate.GameDetailsActivity;
 import edu.illinois.cs465.boardrate.R;
+import edu.illinois.cs465.boardrate.WriteReviewActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link MySavedGamesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MySavedGamesFragment extends Fragment {
+public class MySavedGamesFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,12 +59,26 @@ public class MySavedGamesFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_saved_games, container, false);
+        View v = inflater.inflate(R.layout.fragment_my_saved_games, container, false);
+        ImageView image = v.findViewById(R.id.image);
+        image.setOnClickListener(this);
+        return v;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.image:
+                startActivity(new Intent(getActivity(), GameDetailsActivity.class));
+
+            break;
+        }
     }
 }
