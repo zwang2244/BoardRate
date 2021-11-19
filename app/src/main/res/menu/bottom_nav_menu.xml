@@ -27,7 +27,7 @@
     <item
         android:id="@+id/navigation_my_saved_games"
         android:icon="@drawable/game"
-        android:title="My Saved Games" />
+        android:title="My Saved" />
 
 <!--    <item-->
 <!--        android:id="@+id/navigation_user"-->
