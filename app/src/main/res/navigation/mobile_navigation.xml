@@ -38,11 +38,11 @@
     <fragment
         android:id="@+id/navigation_my_reviews"
         android:name="edu.illinois.cs465.boardrate.ui.notifications.MyReviewFragment"
-        android:label="My review"
+        android:label="My Review"
         tools:layout="@layout/fragment_my_review" />
     <fragment
         android:id="@+id/navigation_my_saved_games"
         android:name="edu.illinois.cs465.boardrate.ui.notifications.MySavedGamesFragment"
-        android:label="My saved games"
+        android:label="My Saved"
         tools:layout="@layout/fragment_my_saved_games" />
 </navigation>
