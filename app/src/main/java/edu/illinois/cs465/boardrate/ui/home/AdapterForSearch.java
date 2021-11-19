@@ -36,7 +36,7 @@ public class AdapterForSearch extends RecyclerView.Adapter<AdapterForSearch.MyVi
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.game_card, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.game_card_search, parent, false);
         MyViewHolder holder = new MyViewHolder(view);
         return holder;
     }
@@ -46,7 +46,6 @@ public class AdapterForSearch extends RecyclerView.Adapter<AdapterForSearch.MyVi
 //        holder.game_pic.
         Glide.with(context).load(this.gamesList.get(position).getImageURL()).into(holder.game_pic);
         holder.game_title.setText(this.gamesList.get(position).getName());
-        holder.game_rank.setText(String.valueOf(position + 1));
         holder.game_rating.setRating(Float.parseFloat(this.gamesList.get(position).getRating()));
         holder.game_tag1.setText(this.gamesList.get(position).getTag1());
         holder.game_tag2.setText(this.gamesList.get(position).getTag2());

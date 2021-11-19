@@ -36,6 +36,8 @@
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.22972972972972974" />
         <entry key="app/src/main/res/layout/fragment_strategy.xml" value="0.11936936936936937" />
         <entry key="app/src/main/res/layout/fragment_war.xml" value="0.11936936936936937" />
+        <entry key="app/src/main/res/layout/game_card.xml" value="0.22972972972972974" />
+        <entry key="app/src/main/res/layout/game_card_search.xml" value="0.22972972972972974" />
         <entry key="app/src/main/res/layout/my_review.xml" value="0.14504504504504503" />
         <entry key="app/src/main/res/layout/my_saved_game.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.22972972972972974" />
