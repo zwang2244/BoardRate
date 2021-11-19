@@ -37,7 +37,7 @@
             app:tabContentStart="0dp"
             app:tabMaxWidth="0dp"
             app:tabGravity="fill"
-            android:id="@+id/top_bar">
+            android:id="@+id/top_bar_top">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
 
         </com.google.android.material.tabs.TabLayout>
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewpage_home"
+            android:id="@+id/viewpage_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="55dp"

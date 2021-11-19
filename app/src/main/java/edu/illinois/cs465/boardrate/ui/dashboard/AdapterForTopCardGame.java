@@ -21,11 +21,11 @@ import java.util.List;
 import edu.illinois.cs465.boardrate.Game;
 import edu.illinois.cs465.boardrate.R;
 
-public class AdapterForStrategyGame extends RecyclerView.Adapter<AdapterForStrategyGame.MyViewHolder> {
+public class AdapterForTopCardGame extends RecyclerView.Adapter<AdapterForTopCardGame.MyViewHolder> {
     List<Game> allGames;
     Context context;
 
-    public AdapterForStrategyGame(List<Game> allGames, Context context) {
+    public AdapterForTopCardGame(List<Game> allGames, Context context) {
 
         //sort the game by ranking by adding a custom comparator
         Collections.sort(allGames, new Comparator<Game>(){
@@ -36,13 +36,13 @@ public class AdapterForStrategyGame extends RecyclerView.Adapter<AdapterForStrat
             }
         });
         // filter out the card games
-        ArrayList<Game> strategygames = new ArrayList<>();
+        ArrayList<Game> cardgames = new ArrayList<>();
         for(int i = 0; i < allGames.size(); i++){
-            if(allGames.get(i).getTag1().equals("Strategy") || allGames.get(i).getTag2().equals("Strategy") || allGames.get(i).getTag3().equals("Strategy")){
-                strategygames.add(allGames.get(i));
+            if(allGames.get(i).getTag1().equals("Card") || allGames.get(i).getTag2().equals("Card") || allGames.get(i).getTag3().equals("Card")){
+                cardgames.add(allGames.get(i));
             }
         }
-        this.allGames = strategygames;
+        this.allGames = cardgames;
         this.context = context;
     }
 
