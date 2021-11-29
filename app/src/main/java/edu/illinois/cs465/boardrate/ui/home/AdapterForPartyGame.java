@@ -24,17 +24,36 @@ import edu.illinois.cs465.boardrate.R;
 public class AdapterForPartyGame extends RecyclerView.Adapter<AdapterForPartyGame.MyViewHolder> {
     List<Game> allGames;
     Context context;
-
-    public AdapterForPartyGame(List<Game> allGames, Context context) {
-
-        //sort the game by ranking by adding a custom comparator
-        Collections.sort(allGames, new Comparator<Game>(){
-            public int compare(Game o1, Game o2){
-                if(o1.getRanking1() == o2.getRanking1())
-                    return 0;
-                return o1.getRanking1() < o2.getRanking1() ? -1 : 1;
-            }
-        });
+    String SortBy;
+    public AdapterForPartyGame(List<Game> allGames,String SortBy, Context context) {
+        this.SortBy = SortBy;
+        if(this.SortBy.equals("Month")){
+            //sort the game by ranking by adding a custom comparator
+            Collections.sort(allGames, new Comparator<Game>(){
+                public int compare(Game o1, Game o2){
+                    if(o1.getRanking1() == o2.getRanking1())
+                        return 0;
+                    return o1.getRanking1() < o2.getRanking1() ? -1 : 1;
+                }
+            });
+        }else if(this.SortBy.equals("Week")){
+            //sort the game by ranking by adding a custom comparator
+            Collections.sort(allGames, new Comparator<Game>(){
+                public int compare(Game o1, Game o2){
+                    if(o1.getRankings2()== o2.getRankings2())
+                        return 0;
+                    return o1.getRankings2() < o2.getRankings2() ? -1 : 1;
+                }
+            });
+        }else if(this.SortBy.equals("Day")){
+            Collections.sort(allGames, new Comparator<Game>(){
+                public int compare(Game o1, Game o2){
+                    if(Float.parseFloat(o1.getRating())== Float.parseFloat(o2.getRating()))
+                        return 0;
+                    return Float.parseFloat(o1.getRating()) < Float.parseFloat(o2.getRating()) ? 1 : -1;
+                }
+            });
+        }
         // filter out the party games
         ArrayList<Game> partygames = new ArrayList<>();
         for(int i = 0; i < allGames.size(); i++){

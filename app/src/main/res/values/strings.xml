@@ -22,4 +22,7 @@
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment"> </string>
+    <string name="label1">One Month</string>
+    <string name="label2">One Week</string>
+    <string name="label3">One Day</string>
 </resources>

@@ -70,6 +70,9 @@
                 />
 
         </com.google.android.material.tabs.TabLayout>
+
+
+
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewpage_home"
             android:layout_width="match_parent"

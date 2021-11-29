@@ -4,12 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.StrategyFragment">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top">
     <!-- TODO: Update blank fragment layout -->
-
+    <RadioGroup
+        android:id="@+id/radioGroupStrategy"
+        android:checkedButton="@+id/radio_button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/radio_button_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/label1"
+            android:buttonTint="@color/purple_500"
+            />
+        <RadioButton
+            android:id="@+id/radio_button_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/label2"
+            android:buttonTint="@color/purple_500"/>
+        <RadioButton
+            android:id="@+id/radio_button_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/label3"
+            android:buttonTint="@color/purple_500"/>
+    </RadioGroup>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_gameList_strategy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </FrameLayout>

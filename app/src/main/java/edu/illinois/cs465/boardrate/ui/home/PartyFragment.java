@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,8 @@ public class PartyFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<Game> allGames = new ArrayList<Game>();
+    private RadioGroup radioGroup;
+    private String Sortby = "Month";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,8 +40,36 @@ public class PartyFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new AdapterForPartyGame(allGames, getActivity());
+        mAdapter = new AdapterForPartyGame(allGames, Sortby, getActivity());
         recyclerView.setAdapter(mAdapter);
+
+
+        radioGroup = binding.radioGroupParty;
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton rb1 = binding.radioButton1;
+                RadioButton rb2 = binding.radioButton2;
+                RadioButton rb3 = binding.radioButton3;
+                if(rb1.getId() == checkedId){
+                    Sortby = "Month";
+                    mAdapter = new AdapterForPartyGame(allGames, Sortby, getActivity());
+                    recyclerView.setAdapter(mAdapter);
+                }
+                if(rb2.getId() == checkedId){
+                    Sortby = "Week";
+                    mAdapter = new AdapterForPartyGame(allGames, Sortby, getActivity());
+                    recyclerView.setAdapter(mAdapter);
+
+                }else if(rb3.getId() == checkedId){
+                    Sortby = "Day";
+                    mAdapter = new AdapterForPartyGame(allGames, Sortby, getActivity());
+                    recyclerView.setAdapter(mAdapter);
+                }
+            }
+        });
+
         return root;
     }
 }
