@@ -27,6 +27,7 @@
         <entry key="app/src/main/res/layout/activity_write_review.xml" value="0.29414414414414414" />
         <entry key="app/src/main/res/layout/fragment_card.xml" value="0.21829710144927536" />
         <entry key="app/src/main/res/layout/fragment_card_top_games.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_card_view.xml" value="0.14387031408308004" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_family.xml" value="0.21829710144927536" />
         <entry key="app/src/main/res/layout/fragment_family_top_games.xml" value="0.1" />
