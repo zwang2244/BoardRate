@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">BoardRate</string>
     <string name="title_home">Trending</string>
-    <string name="title_dashboard">Top All Time</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_search">Search</string>
     <string name="trending_tab_1">Card</string>
@@ -11,7 +10,6 @@
     <string name="trending_tab_5">Party</string>
     <string name="board_game3_description">xploding Kittens is an award-winning card game from Matthew Inman (The Oatmeal) and Elan Lee (XBox). It’s hilarious, cutthroat, and infinitely replayable. It contains many fireballs and a handful of goats.</string>
     <string name="board_game3_title">Exploding Kitten</string>
-    <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -21,7 +19,6 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment"> </string>
     <string name="label1">All Time</string>
     <string name="label2">One Month</string>
     <string name="label3">One Week</string>

@@ -28,13 +28,13 @@ import edu.illinois.cs465.boardrate.GameDetailsActivity;
 import edu.illinois.cs465.boardrate.ListViewAdapter;
 import edu.illinois.cs465.boardrate.R;
 
-public class AdapterForSearch extends BaseAdapter {
+public class AdapterForGameDetails extends BaseAdapter {
     List<Game> allGames;
     private List<Game> gamesList = null;
     Context context;
     LayoutInflater inflater;
 
-    public AdapterForSearch(List<Game> allGames, Context context) {
+    public AdapterForGameDetails(List<Game> allGames, Context context) {
         this.allGames = allGames;
         this.gamesList = allGames;
         this.context = context;
@@ -43,9 +43,9 @@ public class AdapterForSearch extends BaseAdapter {
 
     @NonNull
 
-    public AdapterForSearch.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.game_card_search, parent, false);
-        AdapterForSearch.MyViewHolder holder = new AdapterForSearch.MyViewHolder();
+    public AdapterForGameDetails.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.game_review, parent, false);
+        AdapterForGameDetails.MyViewHolder holder = new AdapterForGameDetails.MyViewHolder();
         view.setTag(holder);
         return holder;
     }
@@ -63,14 +63,14 @@ public class AdapterForSearch extends BaseAdapter {
     }
 
     public View getView(final int position, View view, ViewGroup parent) {
-        final AdapterForSearch.MyViewHolder holder;
+        final AdapterForGameDetails.MyViewHolder holder;
         if (view == null) {
-            holder = new AdapterForSearch.MyViewHolder();
-            view = inflater.inflate(R.layout.game_card_search, null);
+            holder = new AdapterForGameDetails.MyViewHolder();
+            view = inflater.inflate(R.layout.game_review, null);
             view.setTag(holder);
             holder.setattr(view);
         } else {
-            holder = (AdapterForSearch.MyViewHolder) view.getTag();
+            holder = (AdapterForGameDetails.MyViewHolder) view.getTag();
         }
         Glide.with(context).load(this.gamesList.get(position).getImageURL()).into(holder.game_pic);
         holder.game_title.setText(this.gamesList.get(position).getName());
@@ -80,24 +80,6 @@ public class AdapterForSearch extends BaseAdapter {
         holder.game_tag3.setText(this.gamesList.get(position).getTag3());
         holder.game_duration.setText(this.gamesList.get(position).getTimetoPlay());
         return view;
-    }
-
-    // Filter Class
-    public void filter(String charText) {
-        charText = charText.toLowerCase(Locale.getDefault());
-        gamesList = new ArrayList<Game>();
-        Log.d("Search", "XXXXX Added to list");
-        if (charText.length() == 0) {
-            gamesList.addAll(allGames);
-        } else {
-            for (Game wp : allGames) {
-                if (wp.getName().toLowerCase(Locale.getDefault()).contains(charText)) {
-                    gamesList.add(wp);
-
-                }
-            }
-        }
-        notifyDataSetChanged();
     }
 
     @Override

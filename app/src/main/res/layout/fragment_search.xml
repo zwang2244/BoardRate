@@ -14,7 +14,6 @@
             android:iconifiedByDefault="false"
             android:queryHint="Search by game title"
             android:layout_gravity="center_horizontal"/>
-        <!-- TODO: Update blank fragment layout -->
 
         <ListView
             android:id="@+id/searchListView"
