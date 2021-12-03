@@ -83,7 +83,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:hint="Write review here! 250 character limit."
-            android:inputType="none|textCapCharacters"
+            android:inputType="textAutoCorrect"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -34,6 +34,13 @@ public class GameDetailsActivity extends AppCompatActivity {
     private List<Game> allGames = new ArrayList<Game>();
     private List<Review> allReviews = new ArrayList<>();
     private String gameTitle;
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        mAdapter.update();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

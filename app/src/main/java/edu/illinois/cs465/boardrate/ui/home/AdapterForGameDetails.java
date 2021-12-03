@@ -17,6 +17,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.illinois.cs465.boardrate.MyApplication;
 import edu.illinois.cs465.boardrate.Review;
 import edu.illinois.cs465.boardrate.GameDetailsActivity;
 import edu.illinois.cs465.boardrate.R;
@@ -40,6 +41,17 @@ public class AdapterForGameDetails extends BaseAdapter {
             }
         }
         inflater = LayoutInflater.from(context);
+    }
+
+    public void update() {
+        allReviews = MyApplication.getAllReviews();
+        this.reviewList = new ArrayList<>();
+        for (Review r : allReviews){
+            if (r.getGameId() == gameID){
+                reviewList.add(r);
+            }
+        }
+        notifyDataSetChanged();
     }
 
     @NonNull
