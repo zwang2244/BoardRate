@@ -80,14 +80,14 @@ public class WriteReviewActivity extends AppCompatActivity {
                     mr.setReview_Rating(Float.toString(numStars));
                     MyApplication.addMyReview(mr);
 
-
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                        // Actions to do after 1.5 seconds
-                        startActivity(new Intent(WriteReviewActivity.this, MainActivity.class)); //send back to main page
-                    }
-                }, 1500);
+                    finishActivity(1);
+//                Handler handler = new Handler();
+//                handler.postDelayed(new Runnable() {
+//                    public void run() {
+//                        // Actions to do after 1.5 seconds
+//                        startActivity(new Intent(WriteReviewActivity.this, MainActivity.class)); //send back to main page
+//                    }
+//                }, 1500);
             }
         });
 
