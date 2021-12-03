@@ -75,11 +75,13 @@ public class WriteReviewActivity extends AppCompatActivity {
                             mr.setTag2(g.getTag2());
                             mr.setTag3(g.getTag3());
                             mr.setTimetoPlay(g.getTimetoPlay());
+                            mr.setSaved(g.isIfSaved());
 
                             r.setComment(comment);
                             r.setLikes(0);
                             r.setUsername("TrialUser");
                             r.setGameId(finalGameId);
+
                         }
                     }
                     mr.setReview(comment);

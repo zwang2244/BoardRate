@@ -1,9 +1,11 @@
 package edu.illinois.cs465.boardrate.ui.home;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -47,6 +49,10 @@ public class AdapterForMyReview extends RecyclerView.Adapter<AdapterForMyReview.
        holder.game_duration.setText(this.myReviewsList.get(position).getTimetoPlay());
        holder.review_rating.setRating(Float.parseFloat(this.myReviewsList.get(position).getReview_Rating()));
        holder.review.setText(this.myReviewsList.get(position).getReview());
+       if(this.myReviewsList.get(position).isSaved() == true){
+           holder.game_save_btn.setColorFilter(Color.RED);
+           holder.game_save_btn.setAlpha(1f);
+       }
    }
 
     @Override
@@ -64,7 +70,7 @@ public class AdapterForMyReview extends RecyclerView.Adapter<AdapterForMyReview.
         TextView game_duration;
         RatingBar review_rating;
         TextView review;
-
+        ImageButton game_save_btn;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -77,6 +83,7 @@ public class AdapterForMyReview extends RecyclerView.Adapter<AdapterForMyReview.
             game_duration = itemView.findViewById(R.id.duration);
             review_rating = itemView.findViewById(R.id.review_rating);
             review = itemView.findViewById(R.id.review);
+            game_save_btn = itemView.findViewById(R.id.btn_save);
         }
     }
 }
