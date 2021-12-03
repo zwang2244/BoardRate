@@ -11,19 +11,14 @@ import android.widget.TextView;
 import android.widget.BaseAdapter;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-import android.view.LayoutInflater;
 import java.util.Locale;
 
 import edu.illinois.cs465.boardrate.Game;
-import edu.illinois.cs465.boardrate.ListViewAdapter;
 import edu.illinois.cs465.boardrate.R;
 
 public class AdapterForSearch extends BaseAdapter {

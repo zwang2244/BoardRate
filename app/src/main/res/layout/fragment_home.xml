@@ -36,37 +36,36 @@
             app:tabMode="scrollable"
             app:tabContentStart="0dp"
             app:tabMaxWidth="0dp"
-            app:tabGravity="fill"
             android:id="@+id/top_bar">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/trending_tab_1"
+
                 />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/trending_tab_2"
+
                 />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/trending_tab_3"
+
                 />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/trending_tab_4"
+
                 />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/trending_tab_5"
+
                 />
 
         </com.google.android.material.tabs.TabLayout>

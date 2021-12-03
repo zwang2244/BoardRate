@@ -67,4 +67,14 @@ public class FamilyFragment extends Fragment {
 
         return root;
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        recyclerView.setAdapter(null);
+        mAdapter = null;
+        recyclerView = null;
+    }
+
+
 }

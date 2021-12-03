@@ -53,8 +53,8 @@ public class HomeFragment extends Fragment {
         adapterForCategory.addFragement(new CardFragment(), "Card");
         adapterForCategory.addFragement(new StrategyFragment(), "Strategy");
         adapterForCategory.addFragement(new WarFragment(), "War");
-        adapterForCategory.addFragement(new FamilyFragment(), "Family");
         adapterForCategory.addFragement(new PartyFragment(), "Party");
+        adapterForCategory.addFragement(new FamilyFragment(), "Family");
         viewPager.setAdapter(adapterForCategory);
         //        homeViewModel.getText();
 //        final TextView textView = binding.textHome;
@@ -84,9 +84,17 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
+//    @Override
+//    public void onDestroyView() {
+//        super.onDestroyView();
+////        binding = null;
+//    }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
+        mAdapter = null;
+        recyclerView = null;
     }
+
 }
