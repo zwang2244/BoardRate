@@ -6,13 +6,14 @@
     android:id="@+id/card_for_OneGame"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:onClick="gameCardClick">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="top"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <TextView
             android:id="@+id/rank"
@@ -88,7 +89,9 @@
                                 android:background="@null"
                                 android:contentDescription="SAVE BUTTON"
                                 android:src="@drawable/ic_save"
-                                app:tint="#F44336" />
+                                app:tint="#F44336"
+                                android:alpha="0.4"
+                                />
                         </LinearLayout>
 
                         <RatingBar
