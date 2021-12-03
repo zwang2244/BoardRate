@@ -1,9 +1,11 @@
 package edu.illinois.cs465.boardrate.ui.notifications;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -52,6 +54,10 @@ public class AdapterForSavedGame extends RecyclerView.Adapter<AdapterForSavedGam
         holder.game_tag2.setText(this.allGames.get(position).getTag2());
         holder.game_tag3.setText(this.allGames.get(position).getTag3());
         holder.game_duration.setText(this.allGames.get(position).getTimetoPlay());
+        if(this.allGames.get(position).isIfSaved() == true){
+            holder.game_save_btn.setColorFilter(Color.RED);
+            holder.game_save_btn.setAlpha(1f);
+        }
     }
 
     @Override
@@ -68,6 +74,7 @@ public class AdapterForSavedGame extends RecyclerView.Adapter<AdapterForSavedGam
         TextView game_tag2;
         TextView game_tag3;
         TextView game_duration;
+        ImageButton game_save_btn;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -79,6 +86,7 @@ public class AdapterForSavedGame extends RecyclerView.Adapter<AdapterForSavedGam
             game_tag2 = itemView.findViewById(R.id.tag2);
             game_tag3 = itemView.findViewById(R.id.tag3);
             game_duration = itemView.findViewById(R.id.duration);
+            game_save_btn = itemView.findViewById(R.id.btn_save);
         }
     }
 }
