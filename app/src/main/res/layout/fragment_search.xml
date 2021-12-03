@@ -15,7 +15,9 @@
             android:layout_height="wrap_content"
             android:iconifiedByDefault="false"
             android:queryHint="Search by game title"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+
+            />
 
         <ListView
             android:id="@+id/searchListView"

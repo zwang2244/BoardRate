@@ -21,7 +21,8 @@
             android:layout_margin="5dp"
             android:text="1"
             android:textAppearance="?attr/textAppearanceHeadline6"
-            android:textSize="20dp" />
+            android:layout_gravity="center_vertical"
+            android:textSize="30dp" />
 
         <!--Game block-->
         <com.google.android.material.card.MaterialCardView
