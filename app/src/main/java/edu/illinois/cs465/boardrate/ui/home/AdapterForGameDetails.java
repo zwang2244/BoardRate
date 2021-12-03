@@ -99,7 +99,7 @@ public class AdapterForGameDetails extends BaseAdapter {
 
     public class MyViewHolder{
         RatingBar game_rating;
-        TextView likes;
+//        TextView likes;
         TextView username_and_comment;
         TextView numstars;
 
@@ -127,7 +127,7 @@ public class AdapterForGameDetails extends BaseAdapter {
             game_rating = itemView.findViewById(R.id.game_review_rating_bar);
             username_and_comment = itemView.findViewById(R.id.game_review_user_and_review);
             numstars = itemView.findViewById(R.id.game_review_num_stars);
-            likes = itemView.findViewById(R.id.game_review_likes);
+//            likes = itemView.findViewById(R.id.game_review_likes);
         }
     }
 
