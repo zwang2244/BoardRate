@@ -1,13 +1,15 @@
-package edu.illinois.cs465.boardrate.ui;
+package edu.illinois.cs465.boardrate;
 
 public class Review {
     private int gameId;
     private String username;
-    private int rating;
+    private float rating;
     private int likes;
     private String comment;
 
-    public Review(int gameId, String username, int rating, int likes, String comment) {
+    public Review() {}
+
+    public Review(int gameId, String username, float rating, int likes, String comment) {
         this.gameId = gameId;
         this.username = username;
         this.rating = rating;
@@ -15,7 +17,7 @@ public class Review {
         this.comment = comment;
     }
 
-    public Review(int gameId, int rating, int likes, String comment) {
+    public Review(int gameId, float rating, int likes, String comment) {
         this.gameId = gameId;
         this.username = "n/a";
         this.rating = rating;
@@ -40,11 +42,11 @@ public class Review {
         this.username = username;
     }
 
-    public int getRating() {
+    public float getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(float rating) {
         this.rating = rating;
     }
 

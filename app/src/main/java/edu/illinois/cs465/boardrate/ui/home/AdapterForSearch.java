@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.BaseAdapter;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -25,7 +26,9 @@ import java.util.Locale;
 
 import edu.illinois.cs465.boardrate.Game;
 import edu.illinois.cs465.boardrate.GameDetailsActivity;
+import edu.illinois.cs465.boardrate.GameDetailsFragment;
 import edu.illinois.cs465.boardrate.ListViewAdapter;
+import edu.illinois.cs465.boardrate.MainActivity;
 import edu.illinois.cs465.boardrate.R;
 
 public class AdapterForSearch extends BaseAdapter {
@@ -156,10 +159,16 @@ public class AdapterForSearch extends BaseAdapter {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
                     TextView title = (TextView) view.findViewById(R.id.gameTitle);
+//                    GameDetailsFragment nextFrag= new GameDetailsFragment();
+//                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+//                    activity.getSupportFragmentManager().beginTransaction()
+//                            .replace(R.id.fragment_search, nextFrag, "findThisFragment")
+//                            .addToBackStack(null)
+//                            .commit();
+                    Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
                     intent.putExtra("gameTitle", title.getText().toString());
-                    view.getContext().startActivity(intent);
+                    context.startActivity(intent);
                 }
             });
         }

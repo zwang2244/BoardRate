@@ -17,6 +17,7 @@ import java.util.List;
  */
 public class MyApplication extends Application {
     private static List<Game> allGames= new ArrayList<Game>();
+    public List<Review> allReviews = new ArrayList<>();
 
     public MyApplication() {
     }
@@ -28,5 +29,14 @@ public class MyApplication extends Application {
 
     public static void setAllGames(List<Game> allGames) {
         MyApplication.allGames = allGames;
+    }
+
+
+    public List<Review> getAllReviews() {
+        return allReviews;
+    }
+
+    public void setAllReviews(List<Review> allReviews) {
+        this.allReviews = allReviews;
     }
 }
