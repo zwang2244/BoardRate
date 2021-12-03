@@ -8,19 +8,11 @@
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.3625" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3625" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.3625" />
-        <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/activity_game_details.xml" value="0.20260416666666667" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/activity_main.xml" value="0.3463541666666667" />
-        <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/activity_write_review.xml" value="0.19010416666666666" />
-        <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/fragment_card.xml" value="0.1" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/fragment_dashboard.xml" value="0.3463541666666667" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/fragment_home.xml" value="0.3463541666666667" />
-        <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/fragment_my_review.xml" value="0.33" />
-        <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/fragment_my_saved_games.xml" value="0.19791666666666666" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/fragment_notifications.xml" value="0.3463541666666667" />
-        <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/fragment_party_top_games.xml" value="0.20260416666666667" />
-        <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/game_card.xml" value="0.2046875" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/my_review.xml" value="0.3463541666666667" />
-        <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/my_review_card.xml" value="0.25" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/layout/my_saved_game.xml" value="0.3463541666666667" />
         <entry key="..\:/UIUC/FA21/CS465/BoardRate/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/drawable-anydpi/ic_popular.xml" value="0.21306306306306305" />
@@ -39,9 +31,8 @@
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_family.xml" value="0.21829710144927536" />
         <entry key="app/src/main/res/layout/fragment_family_top_games.xml" value="0.1" />
-
-        <entry key="app/src/main/res/layout/fragment_game_details.xml" value="0.27239583333333334" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_my_review.xml" value="0.15364583333333334" />
         <entry key="app/src/main/res/layout/fragment_my_saved_games.xml" value="0.21418020679468242" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.25271739130434784" />
         <entry key="app/src/main/res/layout/fragment_party.xml" value="0.21829710144927536" />
