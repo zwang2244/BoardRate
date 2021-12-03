@@ -1,6 +1,6 @@
 # BoardRate
 
-Zhilin: Trending, Top all the time, game card
+Zhilin: Trending, Top all the time, Game card, Import data from mock-up database
 
 Meha: My account (login), My account (create account), My account (reviews and saved games buttons), Search page
 

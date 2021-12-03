@@ -29,11 +29,15 @@ public class CardFragment extends Fragment {
     private List<Game> allGames = new ArrayList<Game>();
     private RadioGroup radioGroup;
     private String Sortby = "Month";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentCardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+//        if(root == null){
+//            root = inflater.inflate(R.layout.fragment_card, container, false);
+//        }
         MyApplication myApplication = (MyApplication) getActivity().getApplication();
         allGames = myApplication.getAllGames();
 //        for (int i = 0; i<allGames.size();i++){
@@ -75,6 +79,15 @@ public class CardFragment extends Fragment {
         return root;
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_card, container, false);
+    }
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        recyclerView.setAdapter(null);
+        mAdapter = null;
+        recyclerView = null;
     }
 
 
