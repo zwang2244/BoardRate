@@ -2,9 +2,11 @@ package edu.illinois.cs465.boardrate.ui.home;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -119,6 +121,17 @@ public class AdapterForPartyGame extends RecyclerView.Adapter<AdapterForPartyGam
                     Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
                     intent.putExtra("gameTitle", title.getText().toString());
                     context.startActivity(intent);
+                }
+            });
+
+            ImageButton save= itemView.findViewById(R.id.btn_save);
+            save.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    Toast.makeText(v.getContext(),"click", Toast.LENGTH_LONG).show();
+                    System.out.println("click");
+                    save.setColorFilter(Color.RED);
+                    save.setAlpha(1f);
                 }
             });
         }
