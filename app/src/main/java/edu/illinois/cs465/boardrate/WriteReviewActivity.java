@@ -81,6 +81,7 @@ public class WriteReviewActivity extends AppCompatActivity {
                             r.setLikes(0);
                             r.setUsername("TrialUser");
                             r.setGameId(finalGameId);
+                            r.setRating(numStars);
 
                         }
                     }
