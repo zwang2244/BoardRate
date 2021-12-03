@@ -24,6 +24,7 @@ public class FamilyFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<Game> allGames = new ArrayList<Game>();
+    private List<Game> savedGames = new ArrayList<Game>();
     private RadioGroup radioGroup;
     private String Sortby = "Month";
     @Override
@@ -33,11 +34,12 @@ public class FamilyFragment extends Fragment {
         View root = binding.getRoot();
         MyApplication myApplication = (MyApplication) getActivity().getApplication();
         allGames = myApplication.getAllGames();
+        savedGames = myApplication.getSavedGames();
         recyclerView = binding.rvGameListFamily;
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new AdapterForFamilyGame(allGames, Sortby, getActivity());
+        mAdapter = new AdapterForFamilyGame(allGames, savedGames, Sortby, getActivity());
         recyclerView.setAdapter(mAdapter);
         radioGroup = binding.radioGroupFamily;
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
@@ -49,17 +51,17 @@ public class FamilyFragment extends Fragment {
                 RadioButton rb3 = binding.radioButton3;
                 if(rb1.getId() == checkedId){
                     Sortby = "Month";
-                    mAdapter = new AdapterForFamilyGame(allGames, Sortby, getActivity());
+                    mAdapter = new AdapterForFamilyGame(allGames, savedGames, Sortby, getActivity());
                     recyclerView.setAdapter(mAdapter);
                 }
                 if(rb2.getId() == checkedId){
                     Sortby = "Week";
-                    mAdapter = new AdapterForFamilyGame(allGames, Sortby, getActivity());
+                    mAdapter = new AdapterForFamilyGame(allGames, savedGames, Sortby, getActivity());
                     recyclerView.setAdapter(mAdapter);
 
                 }else if(rb3.getId() == checkedId){
                     Sortby = "Day";
-                    mAdapter = new AdapterForFamilyGame(allGames, Sortby, getActivity());
+                    mAdapter = new AdapterForFamilyGame(allGames, savedGames, Sortby, getActivity());
                     recyclerView.setAdapter(mAdapter);
                 }
             }

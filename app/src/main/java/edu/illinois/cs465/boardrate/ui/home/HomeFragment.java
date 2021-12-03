@@ -53,38 +53,13 @@ public class HomeFragment extends Fragment {
         tabLayout = binding.topBar;
         viewPager = binding.viewpageHome;
         tabLayout.setupWithViewPager(viewPager);
-        AdapterForCategory adapterForCategory = new AdapterForCategory(getActivity().getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        AdapterForCategory adapterForCategory = new AdapterForCategory(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         adapterForCategory.addFragement(new CardFragment(), "Card");
         adapterForCategory.addFragement(new StrategyFragment(), "Strategy");
         adapterForCategory.addFragement(new WarFragment(), "War");
         adapterForCategory.addFragement(new PartyFragment(), "Party");
         adapterForCategory.addFragement(new FamilyFragment(), "Family");
         viewPager.setAdapter(adapterForCategory);
-        //        homeViewModel.getText();
-//        final TextView textView = binding.textHome;
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
-
-
-
-//        MyApplication myApplication = (MyApplication) getActivity().getApplication();
-//        allGames = myApplication.getAllGames();
-//        for (int i = 0; i<allGames.size();i++){
-//            Log.d("home fragment", "all games loaded?: " + allGames.get(i));
-//        }
-//
-//        recyclerView = binding.rvGameList;
-//        recyclerView.setHasFixedSize(true);
-//        layoutManager = new LinearLayoutManager(getActivity());
-//        recyclerView.setLayoutManager(layoutManager);
-//        mAdapter = new AdapterForGame(allGames, getActivity());
-//        recyclerView.setAdapter(mAdapter);
-
-
         return root;
     }
 

@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         readMyReviews();
         readGamePageData(); // Read data from raw/mock_db_games_game_page.csv
-        readSavedGamePageData();
+//        readSavedGamePageData();
         myApplication.setAllGames(allGames);
         myApplication.setMyReviews(myReviews);
         myApplication.setSavedGames(allSavedGames);

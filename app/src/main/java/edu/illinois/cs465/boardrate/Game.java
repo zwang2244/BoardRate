@@ -20,6 +20,15 @@ public class Game {
     private int Tag1Ranking;
     private int Tag2Ranking;
     private int Tag3Ranking;
+    private boolean ifSaved = false;
+
+    public boolean isIfSaved() {
+        return ifSaved;
+    }
+
+    public void setIfSaved(boolean ifSaved) {
+        this.ifSaved = ifSaved;
+    }
 
     public int getGameID() {
         return gameID;

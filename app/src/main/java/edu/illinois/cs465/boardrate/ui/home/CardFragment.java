@@ -27,6 +27,7 @@ public class CardFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<Game> allGames = new ArrayList<Game>();
+    private List<Game> savedGames = new ArrayList<Game>();
     private RadioGroup radioGroup;
     private String Sortby = "Month";
 
@@ -40,6 +41,7 @@ public class CardFragment extends Fragment {
 //        }
         MyApplication myApplication = (MyApplication) getActivity().getApplication();
         allGames = myApplication.getAllGames();
+        savedGames = myApplication.getSavedGames();
 //        for (int i = 0; i<allGames.size();i++){
 //            Log.d("home fragment", "all games loaded?: " + allGames.get(i));
 //        }
@@ -47,7 +49,7 @@ public class CardFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new AdapterForCardGame(allGames, Sortby, getActivity());
+        mAdapter = new AdapterForCardGame(allGames, savedGames, Sortby, getActivity());
         recyclerView.setAdapter(mAdapter);
 
         radioGroup = binding.radioGroupCard;
@@ -60,17 +62,17 @@ public class CardFragment extends Fragment {
                 RadioButton rb3 = binding.radioButton3;
                 if(rb1.getId() == checkedId){
                     Sortby = "Month";
-                    mAdapter = new AdapterForCardGame(allGames, Sortby, getActivity());
+                    mAdapter = new AdapterForCardGame(allGames, savedGames, Sortby, getActivity());
                     recyclerView.setAdapter(mAdapter);
                 }
                 if(rb2.getId() == checkedId){
                     Sortby = "Week";
-                    mAdapter = new AdapterForCardGame(allGames, Sortby, getActivity());
+                    mAdapter = new AdapterForCardGame(allGames, savedGames, Sortby, getActivity());
                     recyclerView.setAdapter(mAdapter);
 
                 }else if(rb3.getId() == checkedId){
                     Sortby = "Day";
-                    mAdapter = new AdapterForCardGame(allGames, Sortby, getActivity());
+                    mAdapter = new AdapterForCardGame(allGames, savedGames, Sortby, getActivity());
                     recyclerView.setAdapter(mAdapter);
                 }
             }

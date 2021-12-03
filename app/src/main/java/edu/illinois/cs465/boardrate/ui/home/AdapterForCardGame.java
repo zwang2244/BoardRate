@@ -26,13 +26,16 @@ import java.util.List;
 
 import edu.illinois.cs465.boardrate.Game;
 import edu.illinois.cs465.boardrate.GameDetailsActivity;
+import edu.illinois.cs465.boardrate.MyApplication;
 import edu.illinois.cs465.boardrate.R;
 
 public class AdapterForCardGame extends RecyclerView.Adapter<AdapterForCardGame.MyViewHolder> {
     List<Game> allGames;
+    List<Game> savedGames;
     Context context;
     String SortBy;
-    public AdapterForCardGame(List<Game> allGames, String SortBy, Context context) {
+
+    public AdapterForCardGame(List<Game> allGames, List<Game> savedGames, String SortBy, Context context) {
 
         this.SortBy = SortBy;
         if(this.SortBy.equals("Month")){
@@ -71,6 +74,7 @@ public class AdapterForCardGame extends RecyclerView.Adapter<AdapterForCardGame.
         }
         this.allGames = cardgames;
         this.context = context;
+        this.savedGames = savedGames;
     }
 
     @NonNull
@@ -92,6 +96,10 @@ public class AdapterForCardGame extends RecyclerView.Adapter<AdapterForCardGame.
         holder.game_tag2.setText(this.allGames.get(position).getTag2());
         holder.game_tag3.setText(this.allGames.get(position).getTag3());
         holder.game_duration.setText(this.allGames.get(position).getTimetoPlay());
+        if(this.allGames.get(position).isIfSaved() == true){
+            holder.game_save_btn.setColorFilter(Color.RED);
+            holder.game_save_btn.setAlpha(1f);
+        }
     }
 
     @Override
@@ -108,6 +116,7 @@ public class AdapterForCardGame extends RecyclerView.Adapter<AdapterForCardGame.
         TextView game_tag2;
         TextView game_tag3;
         TextView game_duration;
+        ImageButton game_save_btn;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -119,6 +128,7 @@ public class AdapterForCardGame extends RecyclerView.Adapter<AdapterForCardGame.
             game_tag2 = itemView.findViewById(R.id.tag2);
             game_tag3 = itemView.findViewById(R.id.tag3);
             game_duration = itemView.findViewById(R.id.duration);
+            game_save_btn = itemView.findViewById(R.id.btn_save);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -137,8 +147,19 @@ public class AdapterForCardGame extends RecyclerView.Adapter<AdapterForCardGame.
                 public void onClick(View v) {
 //                    Toast.makeText(v.getContext(),"click", Toast.LENGTH_LONG).show();
                     System.out.println("click");
+                    String t = game_title.getText().toString();
+                    for(int i = 0; i < allGames.size(); i++){
+                        if(allGames.get(i).getName().equals(t)){
+                            allGames.get(i).setIfSaved(true);
+                            savedGames.add(allGames.get(i));
+                            break;
+                        }
+                    }
                     save.setColorFilter(Color.RED);
                     save.setAlpha(1f);
+//                    MyApplication myApplication = (MyApplication) v.getContext().get;
+//                    allGames = myApplication.getAllGames();
+
                 }
             });
         }
