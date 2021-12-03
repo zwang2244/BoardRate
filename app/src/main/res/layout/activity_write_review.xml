@@ -31,166 +31,20 @@
             android:text="Write a Review"
             android:textSize='30dp' />
 
-        <LinearLayout
-            android:id="@+id/card_for_OneGame"
+        <TextView
+            android:id="@+id/whatDoYouThink"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="What do you think of INSERT GAME TITLE?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black"
+            android:textSize='26dp'
+            app:layout_constraintBottom_toBottomOf="@id/textView2" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top"
-                android:orientation="horizontal">
-
-                <!--Game block-->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/card"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    app:cardCornerRadius="30dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:id="@+id/oneGameCard"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="16dp">
-
-                            <ImageView
-                                android:id="@+id/game_pic"
-                                android:layout_width="150dp"
-                                android:layout_height="match_parent"
-                                android:contentDescription="@string/board_game3_description"
-                                android:scaleType="centerCrop"
-                                app:srcCompat="@drawable/board_game3" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:orientation="horizontal">
-
-                                    <ImageButton
-                                        android:id="@+id/btn_save"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:adjustViewBounds="true"
-                                        android:background="@null"
-                                        android:contentDescription="SAVE BUTTON"
-                                        android:src="@drawable/ic_save"
-                                        app:tint="#F44336" />
-
-                                    <TextView
-                                        android:id="@+id/gameTitle"
-                                        android:layout_width="120dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="5dp"
-                                        android:gravity="center"
-                                        android:text="@string/board_game3_title"
-                                        android:textAppearance="?attr/textAppearanceHeadline6"
-                                        android:textSize="20dp" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:id="@+id/tag1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="5dp"
-                                        android:layout_marginTop="1dp"
-                                        android:layout_marginRight="5dp"
-                                        android:layout_marginBottom="1dp"
-                                        android:text="Party"
-                                        android:textAppearance="?attr/textAppearanceBody2"
-                                        android:textColor="?android:attr/textColorSecondary" />
-
-                                    <TextView
-                                        android:id="@+id/tag2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="5dp"
-                                        android:layout_marginTop="1dp"
-                                        android:layout_marginRight="5dp"
-                                        android:layout_marginBottom="1dp"
-                                        android:text="4 Players"
-                                        android:textAppearance="?attr/textAppearanceBody2"
-                                        android:textColor="?android:attr/textColorSecondary" />
-
-                                    <TextView
-                                        android:id="@+id/tag3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="5dp"
-                                        android:layout_marginTop="1dp"
-                                        android:layout_marginRight="5dp"
-                                        android:layout_marginBottom="1dp"
-                                        android:text="Card"
-                                        android:textAppearance="?attr/textAppearanceBody2"
-                                        android:textColor="?android:attr/textColorSecondary" />
-                                </LinearLayout>
-
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:orientation="horizontal">
-
-                                    <ImageButton
-                                        android:id="@+id/icon_timer"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="1dp"
-                                        android:layout_marginBottom="1dp"
-                                        android:adjustViewBounds="true"
-                                        android:background="@null"
-                                        android:contentDescription="Duration"
-                                        android:src="@drawable/ic_clock"
-                                        app:tint="#F44336" />
-
-                                    <TextView
-                                        android:id="@+id/duration"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="10dp"
-                                        android:layout_marginTop="1dp"
-                                        android:layout_marginRight="10dp"
-                                        android:layout_marginBottom="1dp"
-                                        android:text="45min"
-                                        android:textAppearance="?attr/textAppearanceBody2"
-                                        android:textColor="?android:attr/textColorSecondary" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
-
-        </LinearLayout>
 
     </LinearLayout>
 
@@ -209,10 +63,10 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="25dp"
         android:gravity="center"
         android:text="Add a Rating"
-        android:textColor="@color/black"
+
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/ratingBar" />
 
@@ -223,6 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ratingBar">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputBox"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginLeft="10dp"
