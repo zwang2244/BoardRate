@@ -24,7 +24,7 @@
             android:text="1"
             android:textAppearance="?attr/textAppearanceHeadline6"
             android:layout_gravity="center_vertical"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
         <!--Game block-->
         <com.google.android.material.card.MaterialCardView
@@ -34,9 +34,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             app:cardCornerRadius="30dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="@color/gray"
-            app:cardElevation="0dp">
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -93,7 +91,6 @@
                                 android:src="@drawable/ic_save"
                                 app:tint="#F44336"
                                 android:alpha="0.4"
-
                                 />
                         </LinearLayout>
 
