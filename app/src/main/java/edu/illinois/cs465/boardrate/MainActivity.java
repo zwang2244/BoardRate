@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     MyApplication myApplication = (MyApplication) this.getApplication();
     private List<Game> allGames = new ArrayList<Game>();
+    private List<Game> allSavedGames = new ArrayList<Game>();
     private List<Review> allReviews = new ArrayList<>();
 
 
@@ -58,10 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
         readMyReviews();
         readGamePageData(); // Read data from raw/mock_db_games_game_page.csv
+        readSavedGamePageData();
         myApplication.setAllGames(allGames);
-        Log.d("My Reviews", myReviews.toString());
-        Log.d("My Reviews Size", String.valueOf(myReviews.size()));
         myApplication.setMyReviews(myReviews);
+        myApplication.setSavedGames(allSavedGames);
+        Log.d("saved Games", allSavedGames.toString());
 
         //List<Game> Games = myApplication.getAllGames(); // the games can be get in all activities
 
@@ -168,6 +170,43 @@ public class MainActivity extends AppCompatActivity {
 
                 allReviews.add(review);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void readSavedGamePageData(){
+        InputStream is = getResources().openRawResource(R.raw.mock_db_games_saved_game);
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(is, Charset.forName("UTF-8"))
+        );
+        String line = "";
+        try {
+            reader.readLine(); // skip the first row
+            while ((line = reader.readLine()) != null) {
+                //split the line by ','
+                String[] tokens = line.split(",");
+                //read data
+                Game game = new Game();
+                int gameID = Integer.parseInt(tokens[0]);
+                game.setGameID(Integer.parseInt(tokens[0]));
+                game.setName(tokens[1]);
+                game.setRating(tokens[2]);
+                game.setNumberofReviewrs(Integer.parseInt(tokens[3]));
+                game.setImageURL(tokens[4]);
+                game.setTimetoPlay(tokens[5]);
+                game.setRanking1(Integer.parseInt(tokens[6]));
+                game.setRankings2(Integer.parseInt(tokens[7]));
+                game.setNumberofPlayers(tokens[8]);
+                game.setTag1(tokens[9]);
+                game.setTag2(tokens[10]);
+                game.setTag3(tokens[11]);
+                game.setTag1Ranking(Integer.parseInt(tokens[12]));
+                game.setTag2Ranking(Integer.parseInt(tokens[13]));
+                game.setTag3Ranking(Integer.parseInt(tokens[14]));
+
+                allSavedGames.add(game);
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
