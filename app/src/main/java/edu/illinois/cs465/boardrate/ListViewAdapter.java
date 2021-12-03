@@ -50,9 +50,9 @@ public class ListViewAdapter extends BaseAdapter {
         final ViewHolder holder;
         if (view == null) {
             holder = new ViewHolder();
-            view = inflater.inflate(R.layout.fragment_card_view, null);
+            view = inflater.inflate(R.layout.game_card_search, null);
             // Locate the TextViews in fragment_card_view.xml
-            holder.name = (TextView) view.findViewById(R.id.card_gametitle);
+            holder.name = (TextView) view.findViewById(R.id.gameTitle);
             view.setTag(holder);
         } else {
             holder = (ViewHolder) view.getTag();

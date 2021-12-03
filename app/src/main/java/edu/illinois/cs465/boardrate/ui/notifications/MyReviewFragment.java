@@ -1,14 +1,24 @@
+
 package edu.illinois.cs465.boardrate.ui.notifications;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import edu.illinois.cs465.boardrate.MyApplication;
+import edu.illinois.cs465.boardrate.MyReviews;
 import edu.illinois.cs465.boardrate.R;
+import edu.illinois.cs465.boardrate.databinding.FragmentMyReviewBinding;
+import edu.illinois.cs465.boardrate.ui.home.AdapterForMyReview;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +27,12 @@ import edu.illinois.cs465.boardrate.R;
  */
 public class MyReviewFragment extends Fragment {
 
+    private FragmentMyReviewBinding binding;
+
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private List<MyReviews> allReviews = new ArrayList<MyReviews>();
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -61,6 +77,17 @@ public class MyReviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_review, container, false);
+        binding = FragmentMyReviewBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+        MyApplication myApplication = (MyApplication) getActivity().getApplication();
+        allReviews = myApplication.getMyReviews();
+        recyclerView = binding.rvMyReviewList;
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        mAdapter = new AdapterForMyReview(allReviews, getActivity());
+//        Log.d("mAdapter", "asdcsda");
+        recyclerView.setAdapter(mAdapter);
+        return root;
     }
 }
