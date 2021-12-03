@@ -27,6 +27,7 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
     private AdapterForSearch mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<Game> allGames = new ArrayList<Game>();
+    private List<Game> savedGames = new ArrayList<Game>();
     SearchView editsearch;
 
     @Override
@@ -36,12 +37,13 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
         View root = binding.getRoot();
         MyApplication myApplication = (MyApplication) getActivity().getApplication();
         allGames = myApplication.getAllGames();
+        savedGames = myApplication.getSavedGames();
         list = (ListView) root.findViewById(R.id.searchListView);
 //        recyclerView = binding.rvSearch;
 //        recyclerView.setHasFixedSize(true);
 //        layoutManager = new LinearLayoutManager(getActivity());
 //        recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new AdapterForSearch(allGames, getActivity());
+        mAdapter = new AdapterForSearch(allGames, savedGames, getActivity());
         list.setAdapter(mAdapter);
 
         // Locate the EditText in listview_main.xml
