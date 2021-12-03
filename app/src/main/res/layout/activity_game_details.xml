@@ -9,12 +9,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Game Details"
-                android:textSize='30dp' />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="left"-->
+<!--                android:text="Game Details"-->
+<!--                android:textSize='30dp' />-->
 
             <include layout="@layout/game_card_search"/>
 
@@ -29,13 +29,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Reviews" />
+                android:layout_gravity="left"
+                android:text="Reviews"
+                android:textColor="@color/black"
+                android:layout_marginLeft="13dp"
+                android:textSize="26dp" />
 
             <ListView
                 android:id="@+id/game_details_listview"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"/>
+                android:layout_height="fill_parent"
+                android:dividerHeight="0dp"
+                android:divider="@null"/>
         </LinearLayout>
 
         <Button

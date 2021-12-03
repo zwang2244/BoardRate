@@ -21,7 +21,9 @@
             android:id="@+id/searchListView"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@+id/gameSearchView" />
+            android:layout_below="@+id/gameSearchView"
+            android:dividerHeight="0dp"
+            android:divider="@null"/>
 <!--        <androidx.recyclerview.widget.RecyclerView-->
 <!--            android:id="@+id/rv_search"-->
 <!--            android:layout_width="match_parent"-->
