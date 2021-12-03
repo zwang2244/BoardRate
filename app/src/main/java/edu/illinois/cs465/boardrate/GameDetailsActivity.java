@@ -75,10 +75,13 @@ public class GameDetailsActivity extends AppCompatActivity {
         list.setAdapter(mAdapter);
 
         Button b = findViewById(R.id.button_review);
+        String finalGameTitle = gameTitle;
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GameDetailsActivity.this, WriteReviewActivity.class));
+                Intent intent = new Intent(GameDetailsActivity.this, WriteReviewActivity.class);
+                intent.putExtra("gameTitle", finalGameTitle);
+                startActivity(intent);
             }
         });
     }
