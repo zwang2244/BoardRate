@@ -25,6 +25,7 @@ public class WarFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<Game> allGames = new ArrayList<Game>();
+    private List<Game> savedGames = new ArrayList<Game>();
     private RadioGroup radioGroup;
     private String Sortby = "Month";
     @Override
@@ -34,11 +35,12 @@ public class WarFragment extends Fragment {
         View root = binding.getRoot();
         MyApplication myApplication = (MyApplication) getActivity().getApplication();
         allGames = myApplication.getAllGames();
+        savedGames = myApplication.getSavedGames();
         recyclerView = binding.rvGameListWar;
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new AdapterForWarGame(allGames, Sortby, getActivity());
+        mAdapter = new AdapterForWarGame(allGames, savedGames, Sortby, getActivity());
         recyclerView.setAdapter(mAdapter);
 
         radioGroup = binding.radioGroupWar;
@@ -51,17 +53,17 @@ public class WarFragment extends Fragment {
                 RadioButton rb3 = binding.radioButton3;
                 if(rb1.getId() == checkedId){
                     Sortby = "Month";
-                    mAdapter = new AdapterForWarGame(allGames, Sortby, getActivity());
+                    mAdapter = new AdapterForWarGame(allGames, savedGames, Sortby, getActivity());
                     recyclerView.setAdapter(mAdapter);
                 }
                 if(rb2.getId() == checkedId){
                     Sortby = "Week";
-                    mAdapter = new AdapterForWarGame(allGames, Sortby, getActivity());
+                    mAdapter = new AdapterForWarGame(allGames, savedGames, Sortby, getActivity());
                     recyclerView.setAdapter(mAdapter);
 
                 }else if(rb3.getId() == checkedId){
                     Sortby = "Day";
-                    mAdapter = new AdapterForWarGame(allGames, Sortby, getActivity());
+                    mAdapter = new AdapterForWarGame(allGames, savedGames, Sortby, getActivity());
                     recyclerView.setAdapter(mAdapter);
                 }
             }
