@@ -19,7 +19,8 @@
             android:id="@+id/rank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="1dp"
             android:text="1"
             android:textAppearance="?attr/textAppearanceHeadline6"
             android:layout_gravity="center_vertical"
@@ -33,7 +34,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             app:cardCornerRadius="30dp"
-            app:strokeWidth="2dp"
+            app:strokeWidth="1dp"
             app:strokeColor="@color/gray"
             app:cardElevation="0dp">
 
@@ -63,20 +64,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:id="@+id/gameTitle"
                                 android:layout_width="120dp"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="left"
                                 android:text="@string/board_game3_title"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
                                 android:textSize="20dp" />
@@ -91,27 +93,20 @@
                                 android:src="@drawable/ic_save"
                                 app:tint="#F44336"
                                 android:alpha="0.4"
+
                                 />
                         </LinearLayout>
 
-                        <RatingBar
-                            android:id="@+id/game_rate"
-                            style="?android:attr/ratingBarStyleSmall"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:numStars="5"
-                            android:rating="3.5"
-                            android:scaleX="1.5"
-                            android:scaleY="1.5"
-                            android:theme="@style/RatingBar" />
+
 
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
+                            android:gravity="left"
+                            android:layout_gravity="left"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp">
 
                             <TextView
                                 android:id="@+id/tag1"
@@ -119,9 +114,19 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginTop="1dp"
-                                android:layout_marginRight="5dp"
+                                android:layout_marginRight="1dp"
                                 android:layout_marginBottom="1dp"
                                 android:text="Party"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="?android:attr/textColorSecondary" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:text="-"
                                 android:textAppearance="?attr/textAppearanceBody2"
                                 android:textColor="?android:attr/textColorSecondary" />
 
@@ -131,9 +136,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginTop="1dp"
-                                android:layout_marginRight="5dp"
+                                android:layout_marginRight="1dp"
                                 android:layout_marginBottom="1dp"
                                 android:text="4 Players"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="?android:attr/textColorSecondary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:text="-"
                                 android:textAppearance="?attr/textAppearanceBody2"
                                 android:textColor="?android:attr/textColorSecondary" />
 
@@ -143,18 +159,32 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginTop="1dp"
-                                android:layout_marginRight="5dp"
+                                android:layout_marginRight="1dp"
                                 android:layout_marginBottom="1dp"
                                 android:text="Card"
+                                android:maxLines="1"
                                 android:textAppearance="?attr/textAppearanceBody2"
                                 android:textColor="?android:attr/textColorSecondary" />
                         </LinearLayout>
-
+                        <RatingBar
+                            android:id="@+id/game_rate"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="23dp"
+                            android:numStars="5"
+                            android:rating="3.5"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5"
+                            android:theme="@style/RatingBar" />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
+                            android:gravity="left"
+                            android:layout_gravity="left"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp">
 
                             <ImageButton
                                 android:id="@+id/icon_timer"
