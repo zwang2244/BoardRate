@@ -2,7 +2,6 @@ package edu.illinois.cs465.boardrate.ui.home;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,32 +11,34 @@ import android.widget.TextView;
 import android.widget.BaseAdapter;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-import android.view.LayoutInflater;
-import java.util.Locale;
 
-import edu.illinois.cs465.boardrate.Game;
+import edu.illinois.cs465.boardrate.Review;
 import edu.illinois.cs465.boardrate.GameDetailsActivity;
-import edu.illinois.cs465.boardrate.ListViewAdapter;
 import edu.illinois.cs465.boardrate.R;
 
 public class AdapterForGameDetails extends BaseAdapter {
-    List<Game> allGames;
-    private List<Game> gamesList = null;
+    List<Review> allReviews;
+    private List<Review> reviewList = null;
+    private int gameID;
     Context context;
     LayoutInflater inflater;
 
-    public AdapterForGameDetails(List<Game> allGames, Context context) {
-        this.allGames = allGames;
-        this.gamesList = allGames;
+    public AdapterForGameDetails(List<Review> allReviews, int gameID, Context context) {
+        this.allReviews = allReviews;
+
         this.context = context;
+        this.gameID = gameID;
+        this.reviewList = new ArrayList<>();
+        for (Review r : allReviews){
+            if (r.getGameId() == gameID){
+                reviewList.add(r);
+            }
+        }
         inflater = LayoutInflater.from(context);
     }
 
@@ -51,16 +52,16 @@ public class AdapterForGameDetails extends BaseAdapter {
     }
 
 
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-//        holder.game_pic.
-        Glide.with(context).load(this.gamesList.get(position).getImageURL()).into(holder.game_pic);
-        holder.game_title.setText(this.gamesList.get(position).getName());
-        holder.game_rating.setRating(Float.parseFloat(this.gamesList.get(position).getRating()));
-        holder.game_tag1.setText(this.gamesList.get(position).getTag1());
-        holder.game_tag2.setText(this.gamesList.get(position).getTag2());
-        holder.game_tag3.setText(this.gamesList.get(position).getTag3());
-        holder.game_duration.setText(this.gamesList.get(position).getTimetoPlay());
-    }
+//    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+////        holder.game_pic.
+//        Glide.with(context).load(this.reviewList.get(position).getImageURL()).into(holder.game_pic);
+//        holder.game_title.setText(this.reviewList.get(position).getName());
+//        holder.game_rating.setRating(Float.parseFloat(this.reviewList.get(position).getRating()));
+//        holder.game_tag1.setText(this.reviewList.get(position).getTag1());
+//        holder.game_tag2.setText(this.reviewList.get(position).getTag2());
+//        holder.game_tag3.setText(this.reviewList.get(position).getTag3());
+//        holder.game_duration.setText(this.reviewList.get(position).getTimetoPlay());
+//    }
 
     public View getView(final int position, View view, ViewGroup parent) {
         final AdapterForGameDetails.MyViewHolder holder;
@@ -72,25 +73,23 @@ public class AdapterForGameDetails extends BaseAdapter {
         } else {
             holder = (AdapterForGameDetails.MyViewHolder) view.getTag();
         }
-        Glide.with(context).load(this.gamesList.get(position).getImageURL()).into(holder.game_pic);
-        holder.game_title.setText(this.gamesList.get(position).getName());
-        holder.game_rating.setRating(Float.parseFloat(this.gamesList.get(position).getRating()));
-        holder.game_tag1.setText(this.gamesList.get(position).getTag1());
-        holder.game_tag2.setText(this.gamesList.get(position).getTag2());
-        holder.game_tag3.setText(this.gamesList.get(position).getTag3());
-        holder.game_duration.setText(this.gamesList.get(position).getTimetoPlay());
+        holder.username_and_comment.setText(this.reviewList.get(position).getUsername() + ": " +
+                this.reviewList.get(position).getComment());
+        holder.game_rating.setRating(this.reviewList.get(position).getRating());
+//        holder.likes.setText(this.reviewList.get(position).getLikes());
+        holder.numstars.setText(Float.toString(this.reviewList.get(position).getRating()));
         return view;
     }
 
     @Override
     public int getCount() {
-        return gamesList.size();
+        return reviewList.size();
     }
 
 
     @Override
-    public Game getItem(int position) {
-        return gamesList.get(position);
+    public Review getItem(int position) {
+        return reviewList.get(position);
     }
 
     @Override
@@ -99,51 +98,36 @@ public class AdapterForGameDetails extends BaseAdapter {
     }
 
     public class MyViewHolder{
-        ImageView game_pic;
-        TextView  game_title;
         RatingBar game_rating;
-        TextView game_tag1;
-        TextView game_tag2;
-        TextView game_tag3;
-        TextView game_duration;
+//        TextView likes;
+        TextView username_and_comment;
+        TextView numstars;
 
-        public MyViewHolder(@NonNull View itemView) {
-            game_pic = itemView.findViewById(R.id.game_pic);
-            game_title = itemView.findViewById(R.id.gameTitle);
-            game_rating = itemView.findViewById(R.id.game_rate);
-            game_tag1 = itemView.findViewById(R.id.tag1);
-            game_tag2 = itemView.findViewById(R.id.tag2);
-            game_tag3 = itemView.findViewById(R.id.tag3);
-            game_duration = itemView.findViewById(R.id.duration);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
-                    view.getContext().startActivity(intent);
-                }
-            });
-        }
+//        public MyViewHolder(@NonNull View itemView) {
+//            game_pic = itemView.findViewById(R.id.game_pic);
+//            game_title = itemView.findViewById(R.id.gameTitle);
+//            game_rating = itemView.findViewById(R.id.game_rate);
+//            game_tag1 = itemView.findViewById(R.id.tag1);
+//            game_tag2 = itemView.findViewById(R.id.tag2);
+//            game_tag3 = itemView.findViewById(R.id.tag3);
+//            game_duration = itemView.findViewById(R.id.duration);
+//
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
+//                    view.getContext().startActivity(intent);
+//                }
+//            });
+//        }
 
         public MyViewHolder(){}
 
         public void setattr(@NonNull View itemView){
-            game_pic = itemView.findViewById(R.id.game_pic);
-            game_title = itemView.findViewById(R.id.gameTitle);
-            game_rating = itemView.findViewById(R.id.game_rate);
-            game_tag1 = itemView.findViewById(R.id.tag1);
-            game_tag2 = itemView.findViewById(R.id.tag2);
-            game_tag3 = itemView.findViewById(R.id.tag3);
-            game_duration = itemView.findViewById(R.id.duration);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
-                    TextView title = (TextView) view.findViewById(R.id.gameTitle);
-                    intent.putExtra("gameTitle", title.getText().toString());
-                    view.getContext().startActivity(intent);
-                }
-            });
+            game_rating = itemView.findViewById(R.id.game_review_rating_bar);
+            username_and_comment = itemView.findViewById(R.id.game_review_user_and_review);
+            numstars = itemView.findViewById(R.id.game_review_num_stars);
+//            likes = itemView.findViewById(R.id.game_review_likes);
         }
     }
 

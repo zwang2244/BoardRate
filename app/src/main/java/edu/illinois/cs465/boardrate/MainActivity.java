@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
     MyApplication myApplication = (MyApplication) this.getApplication();
     private List<Game> allGames = new ArrayList<Game>();
+    private List<Review> allReviews = new ArrayList<>();
+
+
+    public List<Game> getAllGames() {return allGames;}
+    public List<Review> getAllReviews() {return allReviews;}
     private List<MyReviews> myReviews = new ArrayList<MyReviews>();
 
     @Override
@@ -60,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         //List<Game> Games = myApplication.getAllGames(); // the games can be get in all activities
 
+        readGameReviewData();
 
     }
 
@@ -135,6 +141,32 @@ public class MainActivity extends AppCompatActivity {
                 myReview.setReview(tokens[3]);
                 myReviews.add(myReview);
 
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void readGameReviewData(){
+        InputStream is = getResources().openRawResource(R.raw.mock_db_games_reviews);
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(is, Charset.forName("UTF-8"))
+        );
+        String line = "";
+        try {
+            reader.readLine(); // skip the first row
+            while ((line = reader.readLine()) != null) {
+                //split the line by ','
+                String[] tokens = line.split(",");
+                //read data
+                Review review = new Review();
+                review.setGameId(Integer.parseInt(tokens[0]));
+                review.setUsername(tokens[1]);
+                review.setRating(Float.parseFloat(tokens[2]));
+                review.setLikes(Integer.parseInt(tokens[3]));
+                review.setComment(tokens[4]);
+
+                allReviews.add(review);
             }
         } catch (IOException e) {
             e.printStackTrace();

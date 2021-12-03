@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
@@ -60,12 +61,25 @@ public class WriteReviewActivity extends AppCompatActivity {
 
                 float numStars = ratingBar.getRating();
                 String comment = text.getText().toString().trim();
-                try {
-                    FileWriter writer = new FileWriter("mock_db_games_my_reviews.csv");
-                    writer.append("\n" + finalGameId + ", " + numStars + ", 0, " + comment);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+//                    FileWriter writer = new FileWriter("mock_db_games_my_reviews.csv");
+//                    writer.append("\n" + finalGameId + ", " + numStars + ", 0, " + comment);
+                    MyReviews mr = new MyReviews();
+                    for (Game g : allGames) {
+                        if (g.getName().equals(gameTitle)) {
+                            mr.setGameID(finalGameId);
+                            mr.setImageURL(g.getImageURL());
+                            mr.setRating(g.getRating());
+                            mr.setName(g.getName());
+                            mr.setTag1(g.getTag1());
+                            mr.setTag2(g.getTag2());
+                            mr.setTag3(g.getTag3());
+                            mr.setTimetoPlay(g.getTimetoPlay());
+                        }
+                    }
+                    mr.setReview(comment);
+                    mr.setReview_Rating(Float.toString(numStars));
+                    MyApplication.addMyReview(mr);
+
 
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {

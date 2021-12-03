@@ -1,6 +1,24 @@
 package edu.illinois.cs465.boardrate;
 
 public class MyReviews {
+    public MyReviews(int gameID, String name, String rating, int numberofReviewrs, String imageURL, String timetoPlay, int numberofPlayers, String tag1, String tag2, String tag3, String review, int likes, String review_Rating) {
+        this.gameID = gameID;
+        Name = name;
+        Rating = rating;
+        NumberofReviewrs = numberofReviewrs;
+        ImageURL = imageURL;
+        TimetoPlay = timetoPlay;
+        NumberofPlayers = numberofPlayers;
+        Tag1 = tag1;
+        Tag2 = tag2;
+        Tag3 = tag3;
+        this.review = review;
+        this.likes = likes;
+        this.review_Rating = review_Rating;
+    }
+
+    public MyReviews(){};
+
     private int gameID;
     private String Name;
     private String Rating;
