@@ -12,12 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-import edu.illinois.cs465.boardrate.Game;
 import edu.illinois.cs465.boardrate.MyReviews;
 import edu.illinois.cs465.boardrate.R;
 
@@ -44,7 +40,6 @@ public class AdapterForMyReview extends RecyclerView.Adapter<AdapterForMyReview.
 //        holder.game_pic.
        Glide.with(context).load(this.myReviewsList.get(position).getImageURL()).into(holder.game_pic);
        holder.game_title.setText(this.myReviewsList.get(position).getName());
-       holder.game_rank.setText(String.valueOf(position + 1));
        holder.game_rating.setRating(Float.parseFloat(this.myReviewsList.get(position).getRating()));
        holder.game_tag1.setText(this.myReviewsList.get(position).getTag1());
        holder.game_tag2.setText(this.myReviewsList.get(position).getTag2());
@@ -62,7 +57,6 @@ public class AdapterForMyReview extends RecyclerView.Adapter<AdapterForMyReview.
     public class MyViewHolder extends RecyclerView.ViewHolder{
         ImageView game_pic;
         TextView  game_title;
-        TextView game_rank;
         RatingBar game_rating;
         TextView game_tag1;
         TextView game_tag2;
@@ -76,7 +70,6 @@ public class AdapterForMyReview extends RecyclerView.Adapter<AdapterForMyReview.
             super(itemView);
             game_pic = itemView.findViewById(R.id.game_pic);
             game_title = itemView.findViewById(R.id.gameTitle);
-            game_rank = itemView.findViewById(R.id.rank);
             game_rating = itemView.findViewById(R.id.game_rate);
             game_tag1 = itemView.findViewById(R.id.tag1);
             game_tag2 = itemView.findViewById(R.id.tag2);

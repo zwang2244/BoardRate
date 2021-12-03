@@ -17,12 +17,19 @@ import java.util.List;
  */
 public class MyApplication extends Application {
     private static List<Game> allGames= new ArrayList<Game>();
+    private static List<Game> savedGames= new ArrayList<Game>();
     private static List<MyReviews> myReviews= new ArrayList<MyReviews>();
     public List<Review> allReviews = new ArrayList<>();
 
     public MyApplication() {
     }
 
+    public static List<Game> getSavedGames() {
+        return savedGames;
+    }
+    public static void setSavedGames(List<Game> savedGames) {
+        MyApplication.savedGames = savedGames;
+    }
 
     public static List<Game> getAllGames() {
         return allGames;
