@@ -18,10 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-import android.view.LayoutInflater;
 import java.util.Locale;
 
 import edu.illinois.cs465.boardrate.Game;
@@ -159,8 +156,8 @@ public class AdapterForSearch extends BaseAdapter {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    TextView title = (TextView) view.findViewById(R.id.gameTitle);
                     Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
+                    TextView title = (TextView) view.findViewById(R.id.gameTitle);
                     intent.putExtra("gameTitle", title.getText().toString());
                     context.startActivity(intent);
                 }

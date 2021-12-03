@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     public List<Game> getAllGames() {return allGames;}
     public List<Review> getAllReviews() {return allReviews;}
+    private List<MyReviews> myReviews = new ArrayList<MyReviews>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +56,14 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
+        readMyReviews();
         readGamePageData(); // Read data from raw/mock_db_games_game_page.csv
         myApplication.setAllGames(allGames);
+        Log.d("My Reviews", myReviews.toString());
+        Log.d("My Reviews Size", String.valueOf(myReviews.size()));
+        myApplication.setMyReviews(myReviews);
+
+        //List<Game> Games = myApplication.getAllGames(); // the games can be get in all activities
 
         readGameReviewData();
 
@@ -77,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 String[] tokens = line.split(",");
                 //read data
                 Game game = new Game();
+                int gameID = Integer.parseInt(tokens[0]);
                 game.setGameID(Integer.parseInt(tokens[0]));
                 game.setName(tokens[1]);
                 game.setRating(tokens[2]);
@@ -92,8 +100,47 @@ public class MainActivity extends AppCompatActivity {
                 game.setTag1Ranking(Integer.parseInt(tokens[12]));
                 game.setTag2Ranking(Integer.parseInt(tokens[13]));
                 game.setTag3Ranking(Integer.parseInt(tokens[14]));
+                for(int i = 0; i < myReviews.size(); i++){
+                    MyReviews myReview = myReviews.get(i);
+                    if(myReview.getGameID() == gameID){
+                        myReview.setName(tokens[1]);
+                        myReview.setRating(tokens[2]);
+                        myReview.setNumberofPlayers(Integer.parseInt(tokens[3]));
+                        myReview.setImageURL(tokens[4]);
+                        myReview.setTimetoPlay(tokens[5]);
+                        myReview.setTag1(tokens[9]);
+                        myReview.setTag2(tokens[10]);
+                        myReview.setTag3(tokens[11]);
+//                        Log.d("Main Activity", "Just created " + myReview);
+                    }
+                }
+
                 allGames.add(game);
-                Log.d("Main Activity", "Just created " + game);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void readMyReviews(){
+        InputStream is = getResources().openRawResource(R.raw.mock_db_games_my_reviews);
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(is, Charset.forName("UTF-8"))
+        );
+        String line = "";
+        try {
+            reader.readLine(); // skip the first row
+            while ((line = reader.readLine()) != null) {
+                //split the line by ','
+                String[] tokens = line.split(",");
+                //read data
+                MyReviews myReview = new MyReviews();
+                myReview.setGameID(Integer.parseInt(tokens[0]));
+                myReview.setReview_Rating(tokens[1]);
+                myReview.setLikes(Integer.parseInt(tokens[2]));
+                myReview.setReview(tokens[3]);
+                myReviews.add(myReview);
+
             }
         } catch (IOException e) {
             e.printStackTrace();
