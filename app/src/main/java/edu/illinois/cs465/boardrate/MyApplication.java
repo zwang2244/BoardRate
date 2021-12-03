@@ -45,6 +45,10 @@ public class MyApplication extends Application {
         MyApplication.myReviews = myReviews;
     }
 
+    public static void addMyReview(MyReviews mr) {
+        MyApplication.myReviews.add(mr);
+    }
+
     public static List<MyReviews> getMyReviews() {
         return myReviews;
     }
