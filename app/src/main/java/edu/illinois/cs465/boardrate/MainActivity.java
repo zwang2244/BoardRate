@@ -1,7 +1,10 @@
 package edu.illinois.cs465.boardrate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -56,7 +59,11 @@ public class MainActivity extends AppCompatActivity {
         myApplication.setMyReviews(myReviews);
 
         //List<Game> Games = myApplication.getAllGames(); // the games can be get in all activities
+
+
     }
+
+
 
     private void readGamePageData(){
         InputStream is = getResources().openRawResource(R.raw.mock_db_games_game_page);
@@ -133,6 +140,5 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
 
 }

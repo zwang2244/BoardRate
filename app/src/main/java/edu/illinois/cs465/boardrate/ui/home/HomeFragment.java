@@ -1,10 +1,12 @@
 package edu.illinois.cs465.boardrate.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,6 +25,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.illinois.cs465.boardrate.Game;
+import edu.illinois.cs465.boardrate.GameDetailsActivity;
+import edu.illinois.cs465.boardrate.MainActivity;
 import edu.illinois.cs465.boardrate.MyApplication;
 import edu.illinois.cs465.boardrate.R;
 import edu.illinois.cs465.boardrate.databinding.FragmentHomeBinding;
@@ -83,6 +87,8 @@ public class HomeFragment extends Fragment {
 
         return root;
     }
+
+
 
     @Override
     public void onDestroyView() {

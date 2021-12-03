@@ -1,6 +1,7 @@
 package edu.illinois.cs465.boardrate.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ import android.view.LayoutInflater;
 import java.util.Locale;
 
 import edu.illinois.cs465.boardrate.Game;
+import edu.illinois.cs465.boardrate.GameDetailsActivity;
 import edu.illinois.cs465.boardrate.ListViewAdapter;
 import edu.illinois.cs465.boardrate.R;
 
@@ -131,6 +133,14 @@ public class AdapterForSearch extends BaseAdapter {
             game_tag2 = itemView.findViewById(R.id.tag2);
             game_tag3 = itemView.findViewById(R.id.tag3);
             game_duration = itemView.findViewById(R.id.duration);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
+                    view.getContext().startActivity(intent);
+                }
+            });
         }
 
         public MyViewHolder(){}
@@ -143,6 +153,15 @@ public class AdapterForSearch extends BaseAdapter {
             game_tag2 = itemView.findViewById(R.id.tag2);
             game_tag3 = itemView.findViewById(R.id.tag3);
             game_duration = itemView.findViewById(R.id.duration);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
+                    TextView title = (TextView) view.findViewById(R.id.gameTitle);
+                    intent.putExtra("gameTitle", title.getText().toString());
+                    view.getContext().startActivity(intent);
+                }
+            });
         }
     }
 
