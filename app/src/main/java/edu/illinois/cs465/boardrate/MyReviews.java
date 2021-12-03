@@ -1,7 +1,15 @@
 package edu.illinois.cs465.boardrate;
 
 public class MyReviews {
-    public MyReviews(int gameID, String name, String rating, int numberofReviewrs, String imageURL, String timetoPlay, int numberofPlayers, String tag1, String tag2, String tag3, String review, int likes, String review_Rating) {
+    public boolean isSaved() {
+        return isSaved;
+    }
+
+    public void setSaved(boolean saved) {
+        isSaved = saved;
+    }
+
+    public MyReviews(int gameID, String name, String rating, int numberofReviewrs, String imageURL, String timetoPlay, int numberofPlayers, String tag1, String tag2, String tag3, String review, int likes, String review_Rating, boolean isSaved) {
         this.gameID = gameID;
         Name = name;
         Rating = rating;
@@ -15,10 +23,12 @@ public class MyReviews {
         this.review = review;
         this.likes = likes;
         this.review_Rating = review_Rating;
+        this.isSaved = isSaved;
     }
 
     public MyReviews(){};
 
+    private boolean isSaved;
     private int gameID;
     private String Name;
     private String Rating;
