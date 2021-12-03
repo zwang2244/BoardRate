@@ -4,21 +4,24 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="25dp"
         app:cardBackgroundColor="#D6D4D4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="4dp">
+        android:backgroundTint="@color/white"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="4dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/gray"
+        app:cardElevation="0dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -37,8 +40,10 @@
                     android:id="@+id/game_review_num_stars"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
                     android:text="4.0"
-                    android:textSize="10dp"/>
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
 <!--        -->
 <!--                <TextView-->
 <!--                    android:id="@+id/game_review_likes"-->
@@ -52,9 +57,10 @@
             android:id="@+id/game_review_user_and_review"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16dp"
             android:text="123ryan: This has been the recent game of choice at my family's game night" />
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
