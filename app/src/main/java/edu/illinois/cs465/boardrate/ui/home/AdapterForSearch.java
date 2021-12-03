@@ -160,12 +160,6 @@ public class AdapterForSearch extends BaseAdapter {
                 @Override
                 public void onClick(View view) {
                     TextView title = (TextView) view.findViewById(R.id.gameTitle);
-//                    GameDetailsFragment nextFrag= new GameDetailsFragment();
-//                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
-//                    activity.getSupportFragmentManager().beginTransaction()
-//                            .replace(R.id.fragment_search, nextFrag, "findThisFragment")
-//                            .addToBackStack(null)
-//                            .commit();
                     Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
                     intent.putExtra("gameTitle", title.getText().toString());
                     context.startActivity(intent);

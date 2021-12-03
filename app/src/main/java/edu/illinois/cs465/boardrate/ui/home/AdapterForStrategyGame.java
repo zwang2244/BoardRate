@@ -1,6 +1,7 @@
 package edu.illinois.cs465.boardrate.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import edu.illinois.cs465.boardrate.Game;
+import edu.illinois.cs465.boardrate.GameDetailsActivity;
 import edu.illinois.cs465.boardrate.R;
 
 public class AdapterForStrategyGame extends RecyclerView.Adapter<AdapterForStrategyGame.MyViewHolder> {
@@ -111,6 +113,15 @@ public class AdapterForStrategyGame extends RecyclerView.Adapter<AdapterForStrat
             game_tag2 = itemView.findViewById(R.id.tag2);
             game_tag3 = itemView.findViewById(R.id.tag3);
             game_duration = itemView.findViewById(R.id.duration);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    TextView title = (TextView) view.findViewById(R.id.gameTitle);
+                    Intent intent = new Intent(view.getContext(), GameDetailsActivity.class);
+                    intent.putExtra("gameTitle", title.getText().toString());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }
