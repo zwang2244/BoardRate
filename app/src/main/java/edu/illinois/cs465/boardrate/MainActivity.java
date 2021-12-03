@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         //List<Game> Games = myApplication.getAllGames(); // the games can be get in all activities
 
         readGameReviewData();
+        myApplication.setAllReviews(allReviews);
 
     }
 

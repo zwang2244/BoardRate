@@ -64,6 +64,7 @@ public class WriteReviewActivity extends AppCompatActivity {
 //                    FileWriter writer = new FileWriter("mock_db_games_my_reviews.csv");
 //                    writer.append("\n" + finalGameId + ", " + numStars + ", 0, " + comment);
                     MyReviews mr = new MyReviews();
+                    Review r = new Review();
                     for (Game g : allGames) {
                         if (g.getName().equals(gameTitle)) {
                             mr.setGameID(finalGameId);
@@ -74,11 +75,17 @@ public class WriteReviewActivity extends AppCompatActivity {
                             mr.setTag2(g.getTag2());
                             mr.setTag3(g.getTag3());
                             mr.setTimetoPlay(g.getTimetoPlay());
+
+                            r.setComment(comment);
+                            r.setLikes(0);
+                            r.setUsername("TrialUser");
+                            r.setGameId(finalGameId);
                         }
                     }
                     mr.setReview(comment);
                     mr.setReview_Rating(Float.toString(numStars));
                     MyApplication.addMyReview(mr);
+                    MyApplication.addReview(r);
 
                     finishActivity(1);
 //                Handler handler = new Handler();

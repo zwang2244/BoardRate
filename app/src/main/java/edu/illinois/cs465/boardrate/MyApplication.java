@@ -19,7 +19,7 @@ public class MyApplication extends Application {
     private static List<Game> allGames= new ArrayList<Game>();
     private static List<Game> savedGames= new ArrayList<Game>();
     private static List<MyReviews> myReviews= new ArrayList<MyReviews>();
-    public List<Review> allReviews = new ArrayList<>();
+    private static List<Review> allReviews = new ArrayList<>();
 
     public MyApplication() {
     }
@@ -39,13 +39,16 @@ public class MyApplication extends Application {
         MyApplication.allGames = allGames;
     }
 
+    public static void addReview(Review r) {
+        MyApplication.allReviews.add(r);
+    }
 
-    public List<Review> getAllReviews() {
+    public static List<Review> getAllReviews() {
         return allReviews;
     }
 
-    public void setAllReviews(List<Review> allReviews) {
-        this.allReviews = allReviews;
+    public static void setAllReviews(List<Review> allReviews) {
+        MyApplication.allReviews = allReviews;
     }
 
     public static void setMyReviews(List<MyReviews> myReviews) {

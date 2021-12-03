@@ -47,7 +47,8 @@ public class GameDetailsActivity extends AppCompatActivity {
 
         MyApplication myApplication = (MyApplication) getApplication();
         allGames = myApplication.getAllGames();
-        readGameReviewData();
+        allReviews = myApplication.getAllReviews();
+//        readGameReviewData();
         list = (ListView) findViewById(R.id.game_details_listview);
 //        TextView description = (TextView) findViewById(R.id.game_details_description);
         ImageView game_pic = findViewById(R.id.game_pic);
@@ -85,29 +86,5 @@ public class GameDetailsActivity extends AppCompatActivity {
             }
         });
     }
-    private void readGameReviewData(){
-        InputStream is = getResources().openRawResource(R.raw.mock_db_games_reviews);
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(is, Charset.forName("UTF-8"))
-        );
-        String line = "";
-        try {
-            reader.readLine(); // skip the first row
-            while ((line = reader.readLine()) != null) {
-                //split the line by ','
-                String[] tokens = line.split(",");
-                //read data
-                Review review = new Review();
-                review.setGameId(Integer.parseInt(tokens[0]));
-                review.setUsername(tokens[1]);
-                review.setRating(Float.parseFloat(tokens[2]));
-                review.setLikes(Integer.parseInt(tokens[3]));
-                review.setComment(tokens[4]);
 
-                allReviews.add(review);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
