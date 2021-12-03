@@ -7,9 +7,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RatingBar;
@@ -65,6 +67,7 @@ public class GameDetailsActivity extends AppCompatActivity {
         TextView game_tag2 = findViewById(R.id.tag2);
         TextView game_tag3 = findViewById(R.id.tag3);
         TextView game_duration = findViewById(R.id.duration);
+        ImageButton game_save_btn = findViewById(R.id.btn_save);
         int gameID = 0;
         for (Game g : allGames){
             if (g.getName().equals(gameTitle)){
@@ -76,6 +79,12 @@ public class GameDetailsActivity extends AppCompatActivity {
                 game_tag2.setText(g.getTag2());
                 game_tag3.setText(g.getTag3());
                 game_duration.setText(g.getTimetoPlay());
+                if(g.isIfSaved()){ //&& holder.game_save_btn != null){
+                    game_save_btn.setColorFilter(Color.RED);
+                    game_save_btn.setAlpha(1f);
+                }else{
+                    game_save_btn.setAlpha(0.4f);
+                }
                 break;
             }
         }

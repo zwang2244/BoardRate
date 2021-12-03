@@ -79,7 +79,7 @@
                                 android:src="@drawable/ic_save"
                                 app:tint="#F44336"
                                 android:alpha="0.4"
-                                android:paddingLeft="30dp"
+                                android:paddingLeft="20dp"
                                 />
                         </LinearLayout>
 
