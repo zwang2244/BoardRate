@@ -22,11 +22,11 @@
 <!--        android:title="@string/title_notifications" />-->
     <item
         android:id="@+id/navigation_my_reviews"
-        android:icon="@drawable/review"
+        android:icon="@drawable/ic_baseline_rate_review_24"
         android:title="My Reviews" />
     <item
         android:id="@+id/navigation_my_saved_games"
-        android:icon="@drawable/game"
+        android:icon="@drawable/ic_save"
         android:title="My Saved" />
 
 <!--    <item-->
