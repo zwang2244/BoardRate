@@ -18,22 +18,25 @@ Much of the design layouts of exisiting board game websites are extremely archai
 ## Video Demo of Functional Prototype
 https://user-images.githubusercontent.com/43772150/144767634-8a0363fa-8da5-4890-a5cb-e566ef1a5761.mov
 
+<br/>
+
 ## Paper Prototype
-![image](https://user-images.githubusercontent.com/43772150/144767390-109422f3-8c5c-46e5-908c-8da0be9af4fd.png)
-![image](https://user-images.githubusercontent.com/43772150/144767435-971c0207-c787-442b-ad52-4a4c4690c13d.png)
-![image](https://user-images.githubusercontent.com/43772150/144767460-28e0bd96-aa95-43f9-bbb8-8e88e867aa01.png)
-![image](https://user-images.githubusercontent.com/43772150/144767470-f4642b66-2978-4518-9586-befd5245b0fe.png)
-![image](https://user-images.githubusercontent.com/43772150/144767482-8cb6e39e-4ab9-4687-9d53-099b7a6a8224.png)
-![image](https://user-images.githubusercontent.com/43772150/144767490-a5e6b74f-3751-496b-9f76-dc984ed8a7ef.png)
-![image](https://user-images.githubusercontent.com/43772150/144767494-460238a4-1efa-454f-8b4a-9c8e7e43a4fc.png)
+<img src="https://user-images.githubusercontent.com/43772150/144767390-109422f3-8c5c-46e5-908c-8da0be9af4fd.png" alt="slide1" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767435-971c0207-c787-442b-ad52-4a4c4690c13d.png" alt="slide2" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767460-28e0bd96-aa95-43f9-bbb8-8e88e867aa01.png" alt="slide3" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767470-f4642b66-2978-4518-9586-befd5245b0fe.png" alt="slide4" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767482-8cb6e39e-4ab9-4687-9d53-099b7a6a8224.png" alt="slide5" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767490-a5e6b74f-3751-496b-9f76-dc984ed8a7ef.png" alt="slide6" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767494-460238a4-1efa-454f-8b4a-9c8e7e43a4fc.png" alt="slide7" width="2000"/>
+<br/>
 
 ## Revised Paper Prototype
-![image](https://user-images.githubusercontent.com/43772150/144767540-5a09f06b-2f95-44dd-977a-685ad146e445.png)
-![image](https://user-images.githubusercontent.com/43772150/144767554-49a8c27d-9ec5-44cb-b187-e44963810143.png)
-![image](https://user-images.githubusercontent.com/43772150/144767547-8ea18984-05db-4c3d-98aa-3a65d125182a.png)
-![image](https://user-images.githubusercontent.com/43772150/144767567-27fc4d5a-a682-4bfb-9d3e-04aefb42f6aa.png)
-![image](https://user-images.githubusercontent.com/43772150/144767557-ba1f3dac-26b7-4585-b6bc-2938e53e9780.png)
-![image](https://user-images.githubusercontent.com/43772150/144767576-6ce3c717-2b2e-42b7-a457-2264659093f4.png)
+<img src="https://user-images.githubusercontent.com/43772150/144767540-5a09f06b-2f95-44dd-977a-685ad146e445.png" alt="slide8" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767554-49a8c27d-9ec5-44cb-b187-e44963810143.png" alt="slide9" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767547-8ea18984-05db-4c3d-98aa-3a65d125182a.png" alt="slide10" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767567-27fc4d5a-a682-4bfb-9d3e-04aefb42f6aa.png" alt="slide11" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767557-ba1f3dac-26b7-4585-b6bc-2938e53e9780.png" alt="slide12" width="2000"/>
+<img src="https://user-images.githubusercontent.com/43772150/144767576-6ce3c717-2b2e-42b7-a457-2264659093f4.png" alt="slide13" width="2000"/>
 
 ## Contribution
 Zhilin: Trending, Top all the time, Game card, Save Button
