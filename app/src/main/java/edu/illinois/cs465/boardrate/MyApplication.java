@@ -2,6 +2,7 @@ package edu.illinois.cs465.boardrate;
 
 import android.app.Application;
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -20,6 +21,8 @@ public class MyApplication extends Application {
     private static List<Game> savedGames= new ArrayList<Game>();
     private static List<MyReviews> myReviews= new ArrayList<MyReviews>();
     private static List<Review> allReviews = new ArrayList<>();
+    public static int red_save = Color.argb(255, 253, 62, 62);
+    public static int red_unsave = Color.argb(255, 253, 200, 200);
 
     public MyApplication() {
     }
