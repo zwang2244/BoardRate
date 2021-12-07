@@ -96,9 +96,10 @@ public class AdapterForCardGame extends RecyclerView.Adapter<AdapterForCardGame.
         holder.game_tag2.setText(this.allGames.get(position).getTag2());
         holder.game_tag3.setText(this.allGames.get(position).getTag3());
         holder.game_duration.setText(this.allGames.get(position).getTimetoPlay());
-        if(this.allGames.get(position).isIfSaved() == true){
-            holder.game_save_btn.setColorFilter(Color.RED);
-            holder.game_save_btn.setAlpha(1f);
+        if(this.allGames.get(position).isIfSaved()){ //&& holder.game_save_btn != null){
+            holder.game_save_btn.setColorFilter(MyApplication.red_save);
+        }else{
+            holder.game_save_btn.setColorFilter(MyApplication.red_unsave);
         }
     }
 
@@ -148,17 +149,31 @@ public class AdapterForCardGame extends RecyclerView.Adapter<AdapterForCardGame.
 //                    Toast.makeText(v.getContext(),"click", Toast.LENGTH_LONG).show();
                     System.out.println("click");
                     String t = game_title.getText().toString();
+                    boolean saved = false;
                     for(int i = 0; i < allGames.size(); i++){
                         if(allGames.get(i).getName().equals(t)){
-                            allGames.get(i).setIfSaved(true);
-                            savedGames.add(allGames.get(i));
+                            saved = allGames.get(i).isIfSaved();
+                            if (!saved){
+                                allGames.get(i).setIfSaved(true);
+                                savedGames.add(allGames.get(i));
+                                saved = true;
+                            } else {
+                                allGames.get(i).setIfSaved(false);
+                                savedGames.remove(allGames.get(i));
+                                saved = false;
+                            }
+
                             break;
                         }
                     }
-                    save.setColorFilter(Color.RED);
-                    save.setAlpha(1f);
-//                    MyApplication myApplication = (MyApplication) v.getContext().get;
-//                    allGames = myApplication.getAllGames();
+                    System.out.println(save.getColorFilter());
+                    System.out.println(Color.argb(255, 251, 116, 114));
+                    System.out.println(R.color.red_save);
+                    if (saved){
+                        save.setColorFilter(MyApplication.red_save);
+                    } else {
+                        save.setColorFilter(MyApplication.red_unsave);
+                    }
 
                 }
             });
