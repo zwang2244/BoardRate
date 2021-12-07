@@ -40,7 +40,11 @@
             android:text="@string/label3"
             android:buttonTint="@color/purple_500"/>
     </RadioGroup>
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Based on average rating and number of reviews"
+        android:layout_gravity="center"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_gameList_family"
         android:layout_width="match_parent"
