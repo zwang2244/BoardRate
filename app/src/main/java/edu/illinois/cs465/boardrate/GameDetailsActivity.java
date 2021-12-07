@@ -36,6 +36,7 @@ public class GameDetailsActivity extends AppCompatActivity {
     private List<Game> allGames = new ArrayList<Game>();
     private List<Review> allReviews = new ArrayList<>();
     private String gameTitle;
+    List<Game> savedGames;
 
     @Override
     public void onResume(){
@@ -57,6 +58,7 @@ public class GameDetailsActivity extends AppCompatActivity {
         MyApplication myApplication = (MyApplication) getApplication();
         allGames = myApplication.getAllGames();
         allReviews = myApplication.getAllReviews();
+        savedGames = MyApplication.getSavedGames();
 //        readGameReviewData();
         list = (ListView) findViewById(R.id.game_details_listview);
 //        TextView description = (TextView) findViewById(R.id.game_details_description);
@@ -79,11 +81,11 @@ public class GameDetailsActivity extends AppCompatActivity {
                 game_tag2.setText(g.getTag2());
                 game_tag3.setText(g.getTag3());
                 game_duration.setText(g.getTimetoPlay());
+
                 if(g.isIfSaved()){ //&& holder.game_save_btn != null){
-                    game_save_btn.setColorFilter(Color.RED);
-                    game_save_btn.setAlpha(1f);
+                    game_save_btn.setColorFilter(MyApplication.red_save);
                 }else{
-                    game_save_btn.setAlpha(0.4f);
+                    game_save_btn.setColorFilter(MyApplication.red_unsave);
                 }
                 break;
             }
@@ -99,6 +101,45 @@ public class GameDetailsActivity extends AppCompatActivity {
                 Intent intent = new Intent(GameDetailsActivity.this, WriteReviewActivity.class);
                 intent.putExtra("gameTitle", finalGameTitle);
                 startActivity(intent);
+            }
+        });
+
+        ImageButton save= findViewById(R.id.btn_save);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                    Toast.makeText(v.getContext(),"click", Toast.LENGTH_LONG).show();
+                System.out.println("click");
+                String t = game_title.getText().toString();
+                boolean saved = false;
+                for (int i = 0; i < allGames.size(); i++) {
+                    if (allGames.get(i).getName().equals(t)) {
+                        saved = allGames.get(i).isIfSaved();
+                        if (!saved) {
+                            allGames.get(i).setIfSaved(true);
+                            savedGames.add(allGames.get(i));
+                            saved = true;
+                        } else {
+                            allGames.get(i).setIfSaved(false);
+                            savedGames.remove(allGames.get(i));
+                            saved = false;
+                        }
+
+                        break;
+                    }
+                }
+                System.out.println(save.getColorFilter());
+                System.out.println(Color.argb(255, 251, 116, 114));
+                System.out.println(R.color.red_save);
+                if (saved) {
+                    save.setColorFilter(MyApplication.red_save);
+                } else {
+                    save.setColorFilter(MyApplication.red_unsave);
+                }
+
+//                    MyApplication myApplication = (MyApplication) v.getContext().get;
+//                    allGames = myApplication.getAllGames();
+
             }
         });
     }

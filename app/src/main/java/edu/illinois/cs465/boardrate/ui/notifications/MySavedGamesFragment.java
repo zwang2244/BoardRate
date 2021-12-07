@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,8 +89,12 @@ public class MySavedGamesFragment extends Fragment{
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new AdapterForSavedGame(allSavedGames,getActivity());
+        mAdapter = new AdapterForSavedGame(getActivity());
         recyclerView.setAdapter(mAdapter);
+        if (allSavedGames.size() != 0) {
+            TextView emptytxt = binding.mySavedBlank;
+            emptytxt.setText("");
+        }
         return root;
     }
 

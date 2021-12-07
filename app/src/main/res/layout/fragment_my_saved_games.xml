@@ -7,11 +7,13 @@
     tools:context=".ui.notifications.MySavedGamesFragment">
 
     <TextView
+        android:id="@+id/my_saved_blank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="No Games are Saved"
-        android:textSize='30dp' />
+        android:text="No games are saved."
+        android:textSize='30dp'
+        android:layout_margin="10dp"/>
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView

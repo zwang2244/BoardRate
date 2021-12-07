@@ -79,8 +79,7 @@
                                 android:contentDescription="SAVE BUTTON"
                                 android:src="@drawable/ic_save"
                                 app:tint="#F44336"
-                                android:alpha="0.4"
-                                android:paddingLeft="20dp"
+                                android:paddingLeft="30dp"
                                 />
                         </LinearLayout>
 
@@ -216,6 +215,7 @@
                 android:layout_height="wrap_content"
                 android:text="My Review:"
                 android:textStyle="bold"
+                android:textSize="16dp"
                 android:textColor="@color/black"/>
             <RatingBar
                 android:id="@+id/review_rating"
@@ -257,6 +257,7 @@
                 android:gravity="left"
                 android:text="Game review: Connected is the original Tetris Effect with all-new co-op and competitive online and local multiplayer modes. This is Tetris like you've never seen it, or heard it, or felt it beforean incredibly addictive, unique and breathtakingly gorgeous reinvention of one of the most popular puzzle games of all time."
                 android:textColor="@color/black"
+                android:textSize="16dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"/>
         </LinearLayout>

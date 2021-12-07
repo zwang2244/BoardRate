@@ -15,23 +15,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import edu.illinois.cs465.boardrate.Game;
+import edu.illinois.cs465.boardrate.MyApplication;
 import edu.illinois.cs465.boardrate.R;
 
 
 public class AdapterForSavedGame extends RecyclerView.Adapter<AdapterForSavedGame.MyViewHolder>{
+    List<Game> savedGames;
     List<Game> allGames;
     Context context;
 
-    public AdapterForSavedGame(List<Game> allGames, Context context) {
+    public AdapterForSavedGame(Context context) {
 
         // filter out the card games
-        this.allGames = allGames;
+        this.savedGames = MyApplication.getSavedGames();
+        this.allGames = MyApplication.getAllGames();
         this.context = context;
     }
 
@@ -46,23 +46,20 @@ public class AdapterForSavedGame extends RecyclerView.Adapter<AdapterForSavedGam
     @Override
     public void onBindViewHolder(@NonNull AdapterForSavedGame.MyViewHolder holder, int position) {
 //        holder.game_pic.
-        Glide.with(context).load(this.allGames.get(position).getImageURL()).into(holder.game_pic);
-        holder.game_title.setText(this.allGames.get(position).getName());
+        Glide.with(context).load(this.savedGames.get(position).getImageURL()).into(holder.game_pic);
+        holder.game_title.setText(this.savedGames.get(position).getName());
         holder.game_rank.setText(String.valueOf(position + 1));
-        holder.game_rating.setRating(Float.parseFloat(this.allGames.get(position).getRating()));
-        holder.game_tag1.setText(this.allGames.get(position).getTag1());
-        holder.game_tag2.setText(this.allGames.get(position).getTag2());
-        holder.game_tag3.setText(this.allGames.get(position).getTag3());
-        holder.game_duration.setText(this.allGames.get(position).getTimetoPlay());
-        if(this.allGames.get(position).isIfSaved() == true){
-            holder.game_save_btn.setColorFilter(Color.RED);
-            holder.game_save_btn.setAlpha(1f);
-        }
+        holder.game_rating.setRating(Float.parseFloat(this.savedGames.get(position).getRating()));
+        holder.game_tag1.setText(this.savedGames.get(position).getTag1());
+        holder.game_tag2.setText(this.savedGames.get(position).getTag2());
+        holder.game_tag3.setText(this.savedGames.get(position).getTag3());
+        holder.game_duration.setText(this.savedGames.get(position).getTimetoPlay());
+        holder.game_save_btn.setColorFilter(MyApplication.red_save);
     }
 
     @Override
     public int getItemCount() {
-        return allGames.size();
+        return savedGames.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -87,6 +84,40 @@ public class AdapterForSavedGame extends RecyclerView.Adapter<AdapterForSavedGam
             game_tag3 = itemView.findViewById(R.id.tag3);
             game_duration = itemView.findViewById(R.id.duration);
             game_save_btn = itemView.findViewById(R.id.btn_save);
+            game_save_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    Toast.makeText(v.getContext(),"click", Toast.LENGTH_LONG).show();
+                    System.out.println("click");
+                    String t = game_title.getText().toString();
+                    boolean saved = false;
+                    for(int i = 0; i < allGames.size(); i++){
+                        if(allGames.get(i).getName().equals(t)){
+                            saved = allGames.get(i).isIfSaved();
+                            if (!saved){
+                                allGames.get(i).setIfSaved(true);
+                                savedGames.add(allGames.get(i));
+                                saved = true;
+                            } else {
+                                allGames.get(i).setIfSaved(false);
+                                savedGames.remove(allGames.get(i));
+                                saved = false;
+                            }
+
+                            break;
+                        }
+                    }
+                    System.out.println(game_save_btn.getColorFilter());
+                    System.out.println(Color.argb(255, 251, 116, 114));
+                    System.out.println(R.color.red_save);
+                    if (saved){
+                        game_save_btn.setColorFilter(MyApplication.red_save);
+                    } else {
+                        game_save_btn.setColorFilter(MyApplication.red_unsave);
+                    }
+
+                }
+            });
         }
     }
 }

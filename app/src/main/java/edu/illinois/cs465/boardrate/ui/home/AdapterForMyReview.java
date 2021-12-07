@@ -16,12 +16,17 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import edu.illinois.cs465.boardrate.MyApplication;
 import edu.illinois.cs465.boardrate.MyReviews;
 import edu.illinois.cs465.boardrate.R;
+import edu.illinois.cs465.boardrate.Game;
 
 public class AdapterForMyReview extends RecyclerView.Adapter<AdapterForMyReview.MyViewHolder>{
     List<MyReviews> myReviewsList;
     Context context;
+    List<Game> allGames = MyApplication.getAllGames();
+    List<Game> savedGames = MyApplication.getSavedGames();
+
     public AdapterForMyReview(List<MyReviews> myReviewsList, Context context) {
         this.myReviewsList = myReviewsList;
         this.context = context;
@@ -49,9 +54,17 @@ public class AdapterForMyReview extends RecyclerView.Adapter<AdapterForMyReview.
        holder.game_duration.setText(this.myReviewsList.get(position).getTimetoPlay());
        holder.review_rating.setRating(Float.parseFloat(this.myReviewsList.get(position).getReview_Rating()));
        holder.review.setText(this.myReviewsList.get(position).getReview());
-       if(this.myReviewsList.get(position).isSaved() == true){
-           holder.game_save_btn.setColorFilter(Color.RED);
-           holder.game_save_btn.setAlpha(1f);
+       int id = this.myReviewsList.get(position).getGameID();
+       boolean saved = false;
+       for(int i = 0; i < allGames.size(); i++) {
+           if (allGames.get(i).getGameID() == id) {
+               saved = allGames.get(i).isIfSaved();
+           }
+       }
+       if(saved){ //&& holder.game_save_btn != null){
+           holder.game_save_btn.setColorFilter(MyApplication.red_save);
+       }else{
+           holder.game_save_btn.setColorFilter(MyApplication.red_unsave);
        }
    }
 
@@ -84,6 +97,40 @@ public class AdapterForMyReview extends RecyclerView.Adapter<AdapterForMyReview.
             review_rating = itemView.findViewById(R.id.review_rating);
             review = itemView.findViewById(R.id.review);
             game_save_btn = itemView.findViewById(R.id.btn_save);
+            game_save_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    Toast.makeText(v.getContext(),"click", Toast.LENGTH_LONG).show();
+                    System.out.println("click");
+                    String t = game_title.getText().toString();
+                    boolean saved = false;
+                    for(int i = 0; i < allGames.size(); i++){
+                        if(allGames.get(i).getName().equals(t)){
+                            saved = allGames.get(i).isIfSaved();
+                            if (!saved){
+                                allGames.get(i).setIfSaved(true);
+                                savedGames.add(allGames.get(i));
+                                saved = true;
+                            } else {
+                                allGames.get(i).setIfSaved(false);
+                                savedGames.remove(allGames.get(i));
+                                saved = false;
+                            }
+
+                            break;
+                        }
+                    }
+                    System.out.println(game_save_btn.getColorFilter());
+                    System.out.println(Color.argb(255, 251, 116, 114));
+                    System.out.println(R.color.red_save);
+                    if (saved){
+                        game_save_btn.setColorFilter(MyApplication.red_save);
+                    } else {
+                        game_save_btn.setColorFilter(MyApplication.red_unsave);
+                    }
+
+                }
+            });
         }
     }
 }
