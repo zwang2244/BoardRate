@@ -85,13 +85,12 @@
                                 android:id="@+id/btn_save"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
                                 android:adjustViewBounds="true"
                                 android:background="@null"
                                 android:contentDescription="SAVE BUTTON"
                                 android:src="@drawable/ic_save"
-                                app:tint="#F44336"
-                                android:layout_marginLeft="30dp"
-                                />
+                                app:tint="#F44336" />
                         </LinearLayout>
 
 
